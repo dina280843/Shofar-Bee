@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Shofar Bee 🐝 — A Daily Word Puzzle from Jerusalem</title>
+<meta name="description" content="A daily word puzzle from Jerusalem by Dina Raveh & Shalom Brenner. Make words from 7 letters — every word must contain the center letter.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-pale: #FDF6E3;
+  --stone: #8B7355;
+  --dark: #1E1A10;
+  --cream: #FAF7F0;
+  --honey: #D4870A;
+  --red: #9B3A2A;
+  --green: #2D6B4F;
+  --border: #E2D9C5;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  font-family: 'Inter', sans-serif;
+  color: var(--dark);
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+.site-header {
+  background: var(--dark);
+  border-bottom: 3px solid var(--gold);
+  padding: 0 24px;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--gold-light);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.logo-sub {
+  font-size: 0.68rem;
+  color: var(--stone);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.nav-btn {
+  padding: 7px 16px;
+  border-radius: 3px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border: 1.5px solid var(--gold);
+  color: var(--gold-light);
+  background: transparent;
+  transition: all 0.15s;
+}
+.nav-btn:hover { background: var(--gold); color: var(--dark); }
+.nav-btn.primary { background: var(--gold); color: var(--dark); }
+.nav-btn.primary:hover { background: var(--gold-light); }
+
+/* ── HERO ── */
+.hero {
+  background: var(--dark);
+  padding: 48px 24px 56px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, #3d3220 0%, var(--dark) 70%);
+  opacity: 0.7;
+}
+
+.hero-inner {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-day {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--dark);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-theme {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  color: var(--gold-light);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.hero-credit {
+  font-size: 0.78rem;
+  color: var(--stone);
+  letter-spacing: 0.06em;
+  margin-bottom: 32px;
+}
+
+/* Miniature honey display */
+.hero-letters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.hero-letter {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 2px solid var(--gold);
+  color: var(--gold-light);
+}
+
+.hero-letter.center-letter {
+  background: var(--gold);
+  color: var(--dark);
+  transform: scale(1.15);
+}
+
+.hero-cta {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--dark);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: background 0.15s, transform 0.1s;
+  box-shadow: 0 4px 20px rgba(201,168,76,0.3);
+}
+.hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+/* ── GAME SECTION ── */
+.game-section {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Theme card */
+.theme-card {
+  width: 100%;
+  background: white;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: 14px 18px;
+}
+.theme-card-label {
+  font-size: 0.67rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--stone);
+  margin-bottom: 5px;
+}
+.theme-card p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--dark);
+}
+.theme-card cite {
+  display: block;
+  font-style: normal;
+  font-size: 0.72rem;
+  color: var(--stone);
+  margin-top: 6px;
+}
+
+/* Word display */
+.word-display {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  letter-spacing: 0.3em;
+  color: var(--dark);
+  min-height: 3rem;
+  text-align: center;
+  border-bottom: 2px solid var(--gold);
+  width: 100%;
+  max-width: 340px;
+  padding-bottom: 6px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.word-display.shake { animation: shake 0.35s ease; color: var(--red); border-color: var(--red); }
+.word-display.success { color: var(--green); border-color: var(--green); }
+@keyframes shake {
+  0%,100%{transform:translateX(0)} 20%{transform:translateX(-8px)} 40%{transform:translateX(8px)} 60%{transform:translateX(-5px)} 80%{transform:translateX(5px)}
+}
+
+.feedback {
+  font-size: 0.85rem;
+  font-weight: 600;
+  height: 1.2rem;
+  color: var(--green);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.feedback.error { color: var(--red); }
+
+/* Hive */
+.hive-wrap {
+  position: relative;
+  width: 260px;
+  height: 240px;
+}
+
+.hex-btn {
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: transform 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+.hex-btn:active { transform: scale(0.9); }
+.hex-btn svg { width: 78px; height: 78px; }
+.hex-btn polygon { fill: var(--gold-pale); stroke: var(--gold); stroke-width: 2; transition: fill 0.12s; }
+.hex-btn.center polygon { fill: var(--gold); }
+.hex-btn:hover polygon { fill: var(--gold-light); }
+.hex-btn.center:hover polygon { fill: #d4a82a; }
+.hex-btn text {
+  fill: var(--dark);
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: central;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 11px 22px;
+  border-radius: 4px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid var(--dark);
+  background: white;
+  color: var(--dark);
+  letter-spacing: 0.03em;
+  transition: all 0.15s;
+}
+.btn:hover { background: var(--dark); color: white; }
+.btn.primary { background: var(--dark); color: var(--gold-light); border-color: var(--dark); }
+.btn.primary:hover { background: #3a3220; }
+
+/* Score */
+.score-section { width: 100%; }
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 7px;
+}
+.rank-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--honey);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+.score-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--dark);
+}
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--honey));
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  width: 0%;
+}
+.rank-ticks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.rank-tick {
+  font-size: 0.6rem;
+  color: var(--stone);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Found words */
+.found-section { width: 100%; }
+.found-header {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--stone);
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: space-between;
+}
+.found-words { display: flex; flex-wrap: wrap; gap: 6px; }
+.word-chip {
+  background: white;
+  border: 1.5px solid var(--gold);
+  border-radius: 3px;
+  padding: 3px 10px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--dark);
+  animation: pop 0.2s ease;
+}
+.word-chip.pangram {
+  background: var(--gold);
+  border-color: var(--honey);
+  font-weight: 700;
+}
+@keyframes pop {
+  0%{transform:scale(0.6);opacity:0} 70%{transform:scale(1.1)} 100%{transform:scale(1);opacity:1}
+}
+
+/* Rules */
+.rules-block {
+  width: 100%;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 18px;
+}
+.rules-block summary {
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--stone);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  list-style: none;
+}
+.rules-block summary::after { content: ' ▾'; }
+.rules-block[open] summary::after { content: ' ▴'; }
+.rules-block ul {
+  margin-top: 12px;
+  padding-left: 18px;
+  font-size: 0.82rem;
+  line-height: 2;
+  color: var(--dark);
+}
+
+/* ── ABOUT SECTION ── */
+.about-section {
+  background: white;
+  border-top: 1px solid var(--border);
+  padding: 56px 24px;
+}
+.about-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+@media (max-width: 600px) { .about-inner { grid-template-columns: 1fr; gap: 32px; } }
+
+.about-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.about-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin-bottom: 14px;
+  color: var(--dark);
+}
+.about-body {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: #5a4e3a;
+}
+.about-body a {
+  color: var(--honey);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+}
+.about-body a:hover { color: var(--dark); }
+
+.book-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 20px;
+}
+.book-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--dark);
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+.book-desc {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #5a4e3a;
+  margin-bottom: 14px;
+}
+.book-link {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--dark);
+  border: 1.5px solid var(--dark);
+  padding: 7px 16px;
+  border-radius: 3px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: all 0.15s;
+}
+.book-link:hover { background: var(--dark); color: var(--gold-light); }
+
+/* ── FOOTER ── */
+site-footer {
+  background: var(--dark);
+  border-top: 3px solid var(--gold);
+  padding: 28px 24px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--stone);
+  line-height: 2;
+}
+site-footer a { color: var(--gold); text-decoration: none; }
+
+footer {
+  background: var(--dark);
+  border-top: 3px solid var(--gold);
+  padding: 28px 24px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--stone);
+  line-height: 2;
+}
+footer a { color: var(--gold); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-title">The Shofar Bee 🐝</span>
+      <span class="logo-sub">A daily word puzzle from Jerusalem</span>
+    </div>
+    <nav class="header-nav">
+      <a href="https://theshofarbee.substack.com/" class="nav-btn" target="_blank">Substack</a>
+      <a href="/day2.html" class="nav-btn">Day 2 ↩</a>
+      <a href="#game" class="nav-btn primary">Play Today ↓</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-day">Day 3 · June 29, 2026</div>
+    <h2 class="hero-theme">The Exodus</h2>
+    <p class="hero-credit">From slavery to freedom</p>
+    <div class="hero-letters">
+      <div class="hero-letter">A</div>
+      <div class="hero-letter">D</div>
+      <div class="hero-letter center-letter">M</div>
+      <div class="hero-letter">I</div>
+      <div class="hero-letter">P</div>
+      <div class="hero-letter">R</div>
+      <div class="hero-letter">Y</div>
+    </div>
+    <a href="#game" class="hero-cta">Play Today's Puzzle</a>
+  </div>
+</section>
+
+<!-- ── GAME ── -->
+<section class="game-section" id="game">
+
+  <div class="theme-card">
+    <div class="theme-card-label">Today's Inspiration</div>
+    <p>"Let my people go."</p>
+    <cite>— Exodus 5:1</cite>
+  </div>
+
+  <div class="word-display" id="wordDisplay">·</div>
+  <div class="feedback" id="feedback"></div>
+
+  <div class="hive-wrap" id="hive"></div>
+
+  <div class="controls">
+    <button class="btn" onclick="deleteLetter()">⌫ Delete</button>
+    <button class="btn" onclick="shuffleOuter()">⇌ Shuffle</button>
+    <button class="btn primary" onclick="submitWord()">Enter ↵</button>
+  </div>
+
+  <div class="score-section">
+    <div class="score-row">
+      <span class="rank-label" id="rankLabel">Beginner</span>
+      <span class="score-num"><span id="scoreVal">0</span> pts · <span id="wordCount">0</span> words</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="rank-ticks">
+      <span class="rank-tick">Beginner<br>0</span>
+      <span class="rank-tick">Good<br>6</span>
+      <span class="rank-tick">Solid<br>13</span>
+      <span class="rank-tick">Amazing<br>26</span>
+      <span class="rank-tick">Genius<br>52</span>
+      <span class="rank-tick">⭐ Queen<br>All!</span>
+    </div>
+  </div>
+
+  <div class="found-section">
+    <div class="found-header">
+      <span>Found Words</span>
+      <span id="foundCount">0 found</span>
+    </div>
+    <div class="found-words" id="foundWords"></div>
+    <div style="text-align:center; margin-top: 16px;">
+      <button class="btn" id="revealBtn" onclick="revealWords()" style="background:#8B7355;color:white;border:none;padding:8px 24px;border-radius:20px;cursor:pointer;font-size:0.9rem;">
+        🔍 Reveal All Words
+      </button>
+      <div id="revealSection" style="display:none; margin-top:14px; text-align:left;">
+        <p style="color:#8B7355; font-size:0.85rem; margin-bottom:8px;"><em>Words you missed:</em></p>
+        <div id="missedWords" style="display:flex; flex-wrap:wrap; gap:6px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <details class="rules-block">
+    <summary>How to Play</summary>
+    <ul>
+      <li>Every word must contain the <strong>center letter C</strong></li>
+      <li>Minimum 4 letters — no maximum</li>
+      <li>No proper nouns</li>
+      <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
+      <li>Find the <strong>Pangram</strong> using all 7 letters for ⭐ top honours</li>
+      <li>Tap letters or type on keyboard · Backspace to delete</li>
+      <li>Post your words in the <a href="https://theshofarbee.substack.com/" target="_blank">Substack comments</a></li>
+    </ul>
+  </details>
+
+</section>
+
+<!-- ── ABOUT ── -->
+<section class="about-section">
+  <div class="about-inner">
+    <div>
+      <div class="about-label">About the Puzzle</div>
+      <h3 class="about-title">A word game rooted in Jerusalem</h3>
+      <p class="about-body">
+        The Shofar Bee is a daily word puzzle created by <strong>Dina Raveh</strong> and <strong>Shalom Brenner</strong> in Jerusalem. Each puzzle is inspired by Israeli culture, history, and current events — from museum exhibitions to archaeological discoveries to the textures of everyday life in the city.<br><br>
+        Every day, find as many words as you can from 7 letters. Post your discoveries in the <a href="https://theshofarbee.substack.com/" target="_blank">Substack comments</a> — Reader Discoveries published the following day.
+      </p>
+    </div>
+    <div class="book-card">
+      <div class="about-label">From the Publishers</div>
+      <div class="book-title">Jolted by a Common Threat, We United</div>
+      <p class="book-desc">Personal accounts from Israelis and diaspora Jews responding to the Hamas attack of October 7, 2023. Edited by Shalom Brenner & Marsha Bensoussan.</p>
+      <a href="https://dinaraveh974319.substack.com" class="book-link" target="_blank">Learn more →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div>The Shofar Bee · Jerusalem, Israel 🇮🇱</div>
+  <div>By <a href="https://dinaraveh974319.substack.com" target="_blank">Dina Raveh & Shalom Brenner</a></div>
+  <div style="margin-top:6px; font-size:0.68rem; color:#5a4e3a;">
+    Puzzle updates daily · Subscribe on <a href="https://dinaraveh974319.substack.com" target="_blank">Substack</a> for the word list and Reader Discoveries
+  </div>
+</footer>
+
+<script>
+// ── PUZZLE CONFIG — update this section each day ───────────────────────────
+const PUZZLE = {
+  day: 3,
+  date: 'June 29, 2026',
+  theme: 'The Exodus',
+  center: 'M',
+  outer: ['A', 'D', 'I', 'P', 'R', 'Y'],
+  // Official word list — update after Substack post publishes answers
+  words: new Set([
+  'AMID','ARMY',
+  'DAMP','DRAM','DRAMA',
+  'IMAM','IMPAIR',
+  'MADAM','MAID','MAIM','MAMA','MAMMA','MAMMARY','MARM','MARRY','MAYDAY','MIDAIR','MIDDAY','MIDI','MYRIAD',
+  'PAMPA','PIMP','PRAM','PRIM','PRIMARY','PRIMP','PYRAMID',
+  'RAMADA','RAMP',
+  'YARDARM'
+]),
+  maxScore: 130,
+};
+// ── REVEAL ──────────────────────────────────────────────────────────────────
+function revealWords() {
+  const btn = document.getElementById("revealBtn");
+  const section = document.getElementById("revealSection");
+  const missedDiv = document.getElementById("missedWords");
+
+  if (section.style.display === "none") {
+    // First click: ask for confirmation
+    if (!confirm("Are you sure you want to reveal the answers? This will show all words you have not found yet.")) return;
+
+    // Show missed words
+    const missed = [...PUZZLE.words].filter(w => !found.has(w)).sort();
+    missedDiv.innerHTML = "";
+    if (missed.length === 0) {
+      missedDiv.innerHTML = "<em style=\"color:#C9A84C\">🐝 You found them all! Queen Bee!</em>";
+    } else {
+      missed.forEach(w => {
+        const chip = document.createElement("span");
+        chip.textContent = w;
+        chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
+        if (w === "CRUSADE") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        missedDiv.appendChild(chip);
+      });
+    }
+    section.style.display = "block";
+    btn.textContent = "🔼 Hide Words";
+  } else {
+    section.style.display = "none";
+    btn.textContent = "🔍 Reveal All Words";
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+
+const totalScore = [...PUZZLE.words].reduce((s, w) => {
+  const isPangram = [...PUZZLE.outer, PUZZLE.center].every(l => w.includes(l));
+  return s + (w.length === 4 ? 1 : w.length) + (isPangram ? 7 : 0);
+}, 0);
+PUZZLE.maxScore = totalScore;
+
+const RANKS = [
+  { label: 'Beginner', min: 0 },
+  { label: 'Good',     min: Math.round(totalScore * 0.05) },
+  { label: 'Solid',    min: Math.round(totalScore * 0.10) },
+  { label: 'Amazing',  min: Math.round(totalScore * 0.20) },
+  { label: 'Genius',   min: Math.round(totalScore * 0.40) },
+  { label: '⭐ Queen Bee', min: totalScore },
+];
+
+let current = [];
+let found = new Set();
+let score = 0;
+let outerLetters = [...PUZZLE.outer];
+
+// ── HIVE ────────────────────────────────────────────────────────────────────
+const CX = 130, CY = 120, DIST = 82;
+const ANGLES = [270, 330, 30, 90, 150, 210];
+
+function hexPoints(cx, cy, r) {
+  let pts = [];
+  for (let i = 0; i < 6; i++) {
+    let a = Math.PI / 180 * (60 * i - 30);
+    pts.push(`${cx + r * Math.cos(a)},${cy + r * Math.sin(a)}`);
+  }
+  return pts.join(' ');
+}
+
+function buildHive() {
+  const hive = document.getElementById('hive');
+  hive.innerHTML = '';
+  ANGLES.forEach((deg, i) => {
+    const rad = deg * Math.PI / 180;
+    const bx = CX + DIST * Math.cos(rad);
+    const by = CY + DIST * Math.sin(rad);
+    hive.appendChild(makeHex(outerLetters[i], bx, by, false));
+  });
+  hive.appendChild(makeHex(PUZZLE.center, CX, CY, true));
+}
+
+function makeHex(letter, cx, cy, isCenter) {
+  const btn = document.createElement('button');
+  btn.className = 'hex-btn' + (isCenter ? ' center' : '');
+  btn.style.left = (cx - 39) + 'px';
+  btn.style.top = (cy - 39) + 'px';
+  btn.setAttribute('aria-label', 'Letter ' + letter);
+  const pts = hexPoints(39, 39, 34);
+  btn.innerHTML = `<svg viewBox="0 0 78 78" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="${pts}"/>
+    <text x="39" y="41">${letter}</text>
+  </svg>`;
+  btn.addEventListener('click', () => addLetter(letter));
+  return btn;
+}
+
+// ── INPUT ───────────────────────────────────────────────────────────────────
+function addLetter(l) { current.push(l); render(); }
+
+function deleteLetter() { current.pop(); render(); clearFb(); }
+
+function render() {
+  const el = document.getElementById('wordDisplay');
+  el.textContent = current.length ? current.join('') : '·';
+  el.className = 'word-display';
+}
+
+function submitWord() {
+  const word = current.join('');
+  if (!word) return;
+
+  if (word.length < 4) { fail('Too short — need at least 4 letters'); return; }
+  if (!word.includes(PUZZLE.center)) { fail(`Must contain the center letter ${PUZZLE.center}`); return; }
+  if (found.has(word)) { fail('Already found!'); return; }
+  if (!PUZZLE.words.has(word)) { fail('Not in word list'); return; }
+
+  // Accept
+  found.add(word);
+  const isPangram = [...PUZZLE.outer, PUZZLE.center].every(l => word.includes(l));
+  const pts = word.length === 4 ? 1 : word.length;
+  score += pts + (isPangram ? 7 : 0);
+
+  addChip(word, isPangram);
+  updateScore();
+
+  const msgs = isPangram
+    ? ['⭐ PANGRAM! All 7 letters!', '🐝 Queen move!', '⭐ Magnificent!']
+    : ['Nice!', 'Great!', 'Brilliant!', 'Well found!', 'Lovely!', 'Excellent!'];
+  showFb(msgs[Math.floor(Math.random() * msgs.length)], false);
+
+  document.getElementById('wordDisplay').className = 'word-display success';
+  current = [];
+  setTimeout(render, 700);
+}
+
+function fail(msg) {
+  showFb(msg, true);
+  const el = document.getElementById('wordDisplay');
+  el.classList.add('shake');
+  setTimeout(() => { el.className = 'word-display'; }, 400);
+}
+
+function showFb(msg, isErr) {
+  const el = document.getElementById('feedback');
+  el.textContent = msg;
+  el.className = 'feedback' + (isErr ? ' error' : '');
+  clearTimeout(window._fb);
+  window._fb = setTimeout(clearFb, 2000);
+}
+function clearFb() { document.getElementById('feedback').textContent = ''; }
+
+function addChip(word, isPangram) {
+  const container = document.getElementById('foundWords');
+  const chip = document.createElement('span');
+  chip.className = 'word-chip' + (isPangram ? ' pangram' : '');
+  chip.textContent = word;
+  const chips = [...container.querySelectorAll('.word-chip')];
+  const after = chips.find(c => c.textContent > word);
+  if (after) container.insertBefore(chip, after);
+  else container.appendChild(chip);
+  document.getElementById('foundCount').textContent = found.size + ' found';
+}
+
+function updateScore() {
+  document.getElementById('scoreVal').textContent = score;
+  document.getElementById('wordCount').textContent = found.size;
+  const pct = Math.min(100, (score / PUZZLE.maxScore) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  let rank = RANKS[0];
+  for (const r of RANKS) { if (score >= r.min) rank = r; }
+  document.getElementById('rankLabel').textContent = rank.label;
+}
+
+function shuffleOuter() {
+  for (let i = outerLetters.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [outerLetters[i], outerLetters[j]] = [outerLetters[j], outerLetters[i]];
+  }
+  buildHive();
+}
+
+document.addEventListener('keydown', e => {
+  const k = e.key.toUpperCase();
+  if (k === 'ENTER') { submitWord(); return; }
+  if (k === 'BACKSPACE') { deleteLetter(); return; }
+  const all = [...PUZZLE.outer, PUZZLE.center];
+  if (all.includes(k)) addLetter(k);
+});
+
+buildHive();
+</script>
+</body>
+</html>
