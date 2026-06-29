@@ -520,9 +520,54 @@ footer {
   line-height: 2;
 }
 footer a { color: var(--gold); text-decoration: none; }
+
+/* ── NEW-HOME BANNER ── */
+.move-banner {
+  background: var(--gold);
+  color: var(--dark);
+  font-size: 0.82rem;
+  text-align: center;
+  padding: 9px 42px 9px 16px;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+.move-banner strong { font-weight: 700; }
+.move-banner a { color: var(--dark); font-weight: 700; text-decoration: underline; }
+.move-banner-close {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--dark);
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+}
 </style>
 </head>
 <body>
+
+<!-- ── NEW-HOME BANNER ── -->
+<div class="move-banner" id="moveBanner">
+  🐝 <strong>The Shofar Bee has a new home!</strong> Bookmark us at
+  <a href="https://dina280843.github.io/Shofar-Bee">dina280843.github.io/Shofar-Bee</a>
+  <button class="move-banner-close" onclick="dismissBanner()" aria-label="Dismiss notice">×</button>
+</div>
+<script>
+  function dismissBanner() {
+    document.getElementById('moveBanner').style.display = 'none';
+    try { localStorage.setItem('sb_banner_dismissed', '1'); } catch (e) {}
+  }
+  try {
+    if (localStorage.getItem('sb_banner_dismissed') === '1') {
+      document.getElementById('moveBanner').style.display = 'none';
+    }
+  } catch (e) {}
+</script>
 
 <!-- ── HEADER ── -->
 <header class="site-header">
