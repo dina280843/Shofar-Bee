@@ -634,9 +634,9 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="rank-ticks">
       <span class="rank-tick">Beginner<br>0</span>
       <span class="rank-tick">Good<br>6</span>
-      <span class="rank-tick">Solid<br>13</span>
-      <span class="rank-tick">Amazing<br>26</span>
-      <span class="rank-tick">Genius<br>52</span>
+      <span class="rank-tick">Solid<br>12</span>
+      <span class="rank-tick">Amazing<br>24</span>
+      <span class="rank-tick">Genius<br>48</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -712,7 +712,7 @@ const PUZZLE = {
   outer: ['A', 'D', 'I', 'P', 'R', 'Y'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'AMID','ARMY',
+  'AMID','ARMADA','ARMY',
   'DAMP','DRAM','DRAMA',
   'IMAM','IMPAIR',
   'MADAM','MAID','MAIM','MAMA','MAMMA','MAMMARY','MARM','MARRY','MAYDAY','MIDAIR','MIDDAY','MIDI','MYRIAD',
@@ -742,7 +742,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "CRUSADE") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "PYRAMID") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }
