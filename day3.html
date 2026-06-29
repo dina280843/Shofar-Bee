@@ -580,7 +580,7 @@ footer a { color: var(--gold); text-decoration: none; }
       <a href="https://theshofarbee.substack.com/" class="nav-btn" target="_blank">Substack</a>
       <a href="day1.html" class="nav-btn">Day 1 ↩</a>
       <a href="day2.html" class="nav-btn">Day 2 ↩</a>
-      <a href="day3.html" class="nav-btn">Day 3 ↩</a>
+      <a href="index.html" class="nav-btn">Day 4 →</a>
       <a href="#game" class="nav-btn primary">Play Today ↓</a>
     </nav>
   </div>
@@ -589,17 +589,17 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-day">Day 4 · June 30, 2026</div>
-    <h2 class="hero-theme">Pilgrimage to Jerusalem</h2>
-    <p class="hero-credit">Aliyah la-Regel — going up to the Temple</p>
+    <div class="hero-day">Day 3 · June 29, 2026</div>
+    <h2 class="hero-theme">The Exodus</h2>
+    <p class="hero-credit">From slavery to freedom</p>
     <div class="hero-letters">
-      <div class="hero-letter">G</div>
+      <div class="hero-letter">A</div>
+      <div class="hero-letter">D</div>
+      <div class="hero-letter center-letter">M</div>
       <div class="hero-letter">I</div>
-      <div class="hero-letter">M</div>
-      <div class="hero-letter center-letter">L</div>
       <div class="hero-letter">P</div>
       <div class="hero-letter">R</div>
-      <div class="hero-letter">S</div>
+      <div class="hero-letter">Y</div>
     </div>
     <a href="#game" class="hero-cta">Play Today's Puzzle</a>
   </div>
@@ -610,8 +610,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>"I rejoiced when they said to me: 'Let us go up to the House of the LORD.'"</p>
-    <cite>— Psalm 122:1, A Song of Ascents</cite>
+    <p>"Let my people go."</p>
+    <cite>— Exodus 5:1</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -633,10 +633,10 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks">
       <span class="rank-tick">Beginner<br>0</span>
-      <span class="rank-tick">Good<br>8</span>
-      <span class="rank-tick">Solid<br>17</span>
-      <span class="rank-tick">Amazing<br>33</span>
-      <span class="rank-tick">Genius<br>67</span>
+      <span class="rank-tick">Good<br>6</span>
+      <span class="rank-tick">Solid<br>13</span>
+      <span class="rank-tick">Amazing<br>26</span>
+      <span class="rank-tick">Genius<br>52</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -661,7 +661,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter L</strong></li>
+      <li>Every word must contain the <strong>center letter C</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -705,22 +705,22 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
-  day: 4,
-  date: 'June 30, 2026',
-  theme: 'Pilgrimage to Jerusalem',
-  center: 'L',
-  outer: ['G', 'I', 'M', 'P', 'R', 'S'],
+  day: 3,
+  date: 'June 29, 2026',
+  theme: 'The Exodus',
+  center: 'M',
+  outer: ['A', 'D', 'I', 'P', 'R', 'Y'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'GILL','GILLS','GIRL','GIRLS','GLIMS','GRILL','GRILLS',
-  'ILLS',
-  'LIGS','LILLS','LIMP','LIMPS','LIPS','LISP','LISPS',
-  'MILL','MILLS','MILS',
-  'PILGRIM','PILGRIMS','PILIS','PILL','PILLS','PIRLS','PLIMS','PRILLS',
-  'RILL','RILLS',
-  'SIGIL','SIGILS','SILL','SILLS','SIMPLISM','SIMPLISMS','SLIM','SLIMS','SLIP','SLIPS','SPILL','SPILLS'
+  'AMID','ARMY',
+  'DAMP','DRAM','DRAMA',
+  'IMAM','IMPAIR',
+  'MADAM','MAID','MAIM','MAMA','MAMMA','MAMMARY','MARM','MARRY','MAYDAY','MIDAIR','MIDDAY','MIDI','MYRIAD',
+  'PAMPA','PIMP','PRAM','PRIM','PRIMARY','PRIMP','PYRAMID',
+  'RAMADA','RAMP',
+  'YARDARM'
 ]),
-  maxScore: 167,
+  maxScore: 130,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -742,7 +742,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "PILGRIMS") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "CRUSADE") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }
