@@ -639,7 +639,7 @@ footer a { color: var(--gold); text-decoration: none; }
       <span class="score-num"><span id="scoreVal">0</span> pts · <span id="wordCount">0</span> words</span>
     </div>
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-    <div class="rank-ticks">
+    <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0</span>
       <span class="rank-tick">Good<br>48</span>
       <span class="rank-tick">Solid<br>120</span>
@@ -820,12 +820,22 @@ PUZZLE.maxScore = totalScore;
 
 const RANKS = [
   { label: 'Beginner', min: 0 },
-  { label: 'Good',     min: Math.round(totalScore * 0.05) },
-  { label: 'Solid',    min: Math.round(totalScore * 0.10) },
-  { label: 'Amazing',  min: Math.round(totalScore * 0.20) },
-  { label: 'Genius',   min: Math.round(totalScore * 0.40) },
+  { label: 'Good',     min: Math.round(totalScore * 0.10) },
+  { label: 'Solid',    min: Math.round(totalScore * 0.25) },
+  { label: 'Amazing',  min: Math.round(totalScore * 0.42) },
+  { label: 'Great',    min: Math.round(totalScore * 0.58) },
+  { label: 'Genius',   min: Math.round(totalScore * 0.75) },
   { label: '⭐ Queen Bee', min: totalScore },
 ];
+// Build the rank ruler from RANKS so labels/values always match the thresholds
+(function(){
+  var t = document.getElementById('rankTicks');
+  if (t) t.innerHTML = RANKS.map(function(r,i){
+    var label = r.label === '⭐ Queen Bee' ? '⭐ Queen' : r.label;
+    var val = (i === RANKS.length - 1) ? 'All!' : r.min;
+    return '<span class="rank-tick">' + label + '<br>' + val + '</span>';
+  }).join('');
+})();
 
 let current = [];
 let found = new Set();
