@@ -894,11 +894,18 @@ function addChip(word, isPangram) {
 function updateScore() {
   document.getElementById('scoreVal').textContent = score;
   document.getElementById('wordCount').textContent = found.size;
-  const pct = Math.min(100, (score / PUZZLE.maxScore) * 100);
+  let ri = 0;
+  for (let i = 0; i < RANKS.length; i++) { if (score >= RANKS[i].min) ri = i; }
+  const seg = 100 / (RANKS.length - 1);
+  let pct;
+  if (ri >= RANKS.length - 1) { pct = 100; }
+  else {
+    const lo = RANKS[ri].min, hi = RANKS[ri + 1].min;
+    const within = hi > lo ? Math.min(1, (score - lo) / (hi - lo)) : 0;
+    pct = (ri + within) * seg;
+  }
   document.getElementById('progressFill').style.width = pct + '%';
-  let rank = RANKS[0];
-  for (const r of RANKS) { if (score >= r.min) rank = r; }
-  document.getElementById('rankLabel').textContent = rank.label;
+  document.getElementById('rankLabel').textContent = RANKS[ri].label;
 }
 
 function shuffleOuter() {
