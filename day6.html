@@ -587,11 +587,11 @@ footer a { color: var(--gold); text-decoration: none; }
       <a href="https://theshofarbee.substack.com/" class="nav-btn" target="_blank">Substack</a>
       <a href="day1.html" class="nav-btn">Day 1 ↩</a>
       <a href="day2.html" class="nav-btn">Day 2 ↩</a>
-      <a href="day4.html" class="nav-btn">Day 4 →</a>
-      <a href="day5.html" class="nav-btn">Day 5 →</a>
-      <a href="day6.html" class="nav-btn">Day 6 →</a>
+      <a href="day3.html" class="nav-btn">Day 3 ↩</a>
+      <a href="day4.html" class="nav-btn">Day 4 ↩</a>
+      <a href="day5.html" class="nav-btn">Day 5 ↩</a>
       <a href="index.html" class="nav-btn">Day 7 →</a>
-      <a href="index.html#game" class="nav-btn primary">Play Today ↓</a>
+      <a href="#game" class="nav-btn primary">Play Today ↓</a>
     </nav>
   </div>
 </header>
@@ -599,19 +599,19 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-day">Day 3 · June 29, 2026</div>
-    <h2 class="hero-theme">The Exodus</h2>
-    <p class="hero-credit">From slavery to freedom</p>
+    <div class="hero-day">Day 6 · July 2, 2026</div>
+    <h2 class="hero-theme">The Giant's Fall</h2>
+    <p class="hero-credit">Size isn't the whole story — can you find it?</p>
     <div class="hero-letters">
-      <div class="hero-letter">A</div>
-      <div class="hero-letter">D</div>
-      <div class="hero-letter center-letter">M</div>
+      <div class="hero-letter">G</div>
+      <div class="hero-letter">H</div>
       <div class="hero-letter">I</div>
-      <div class="hero-letter">P</div>
-      <div class="hero-letter">R</div>
-      <div class="hero-letter">Y</div>
+      <div class="hero-letter center-letter">A</div>
+      <div class="hero-letter">L</div>
+      <div class="hero-letter">O</div>
+      <div class="hero-letter">T</div>
     </div>
-    <a href="index.html#game" class="hero-cta">Play Today's Puzzle</a>
+    <a href="#game" class="hero-cta">Play Today's Puzzle</a>
   </div>
 </section>
 
@@ -620,8 +620,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>"Let my people go."</p>
-    <cite>— Exodus 5:1</cite>
+    <p>"Then said David to the Philistine, Thou comest to me with a sword... but I come to thee in the name of the LORD of hosts."</p>
+    <cite>— 1 Samuel 17:45</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -643,10 +643,10 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0</span>
-      <span class="rank-tick">Good<br>6</span>
-      <span class="rank-tick">Solid<br>12</span>
-      <span class="rank-tick">Amazing<br>24</span>
-      <span class="rank-tick">Genius<br>48</span>
+      <span class="rank-tick">Good<br>5</span>
+      <span class="rank-tick">Solid<br>10</span>
+      <span class="rank-tick">Amazing<br>19</span>
+      <span class="rank-tick">Genius<br>38</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -671,7 +671,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter C</strong></li>
+      <li>Every word must contain the <strong>center letter A</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -715,22 +715,20 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
-  day: 3,
-  date: 'June 29, 2026',
-  theme: 'The Exodus',
-  center: 'M',
-  outer: ['A', 'D', 'I', 'P', 'R', 'Y'],
+  day: 6,
+  date: 'July 2, 2026',
+  theme: "The Giant's Fall",
+  center: 'A',
+  outer: ['G', 'H', 'I', 'L', 'O', 'T'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'AMID','ARMADA','ARMY',
-  'DAMP','DRAM','DRAMA',
-  'IMAM','IMPAIR',
-  'MADAM','MAID','MAIM','MAMA','MAMMA','MAMMARY','MARM','MARRY','MAYDAY','MIDAIR','MIDDAY','MIDI','MYRIAD',
-  'PAMPA','PIMP','PRAM','PRIM','PRIMARY','PRIMP','PYRAMID',
-  'RAMADA','RAMP',
-  'YARDARM'
+  'AGITA','AGOG','AIOLI','ALGA','ALGAL','ALIGHT','ALIT','ALLOT','ALOHA','ALTO',
+  'ATILT','ATOLL','GAGA','GAIT','GALA','GALL','GALOOT','GLIA','GLOAT','GLOTTAL',
+  'GOAL','GOAT','GOLIATH','GOTTA','HAIL','HALAL','HALL','HALO','HALT','HATH',
+  'HATHA','HIATAL','HIGHTAIL','IOTA','LATH','LOATH','LOGGIA','OATH','OTALGIA',
+  'TAIGA','TAIL','TAILLIGHT','TALI','TALL','TALLIT','TATTOO','THAT','TOGA','TOTAL'
 ]),
-  maxScore: 130,
+  maxScore: 175,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -752,7 +750,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "PYRAMID") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "GOLIATH") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }
