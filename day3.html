@@ -49,15 +49,18 @@ body {
   max-width: 900px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 16px 0;
-  gap: 16px;
+  gap: 10px;
+  padding: 12px 0;
 }
 
 .logo {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
 }
 
 .logo-title {
@@ -70,16 +73,17 @@ body {
 
 .logo-sub {
   font-size: 0.68rem;
-  color: var(--stone);
+  color: #C3B085;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-top: 4px;
+  margin-top: 0;
 }
 
 .header-nav {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
-  flex-shrink: 0;
 }
 
 .nav-btn {
@@ -102,7 +106,7 @@ body {
 /* ── HERO ── */
 .hero {
   background: var(--dark);
-  padding: 48px 24px 56px;
+  padding: 34px 24px 26px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -145,10 +149,10 @@ body {
 }
 
 .hero-credit {
-  font-size: 0.78rem;
-  color: var(--stone);
-  letter-spacing: 0.06em;
-  margin-bottom: 32px;
+  font-size: 0.74rem;
+  color: #D8C6A0;
+  letter-spacing: 0.04em;
+  margin-bottom: 22px;
 }
 
 /* Miniature honey display */
@@ -199,11 +203,11 @@ body {
 .game-section {
   max-width: 520px;
   margin: 0 auto;
-  padding: 40px 16px;
+  padding: 14px 16px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
 }
 
 /* Theme card */
@@ -271,7 +275,8 @@ body {
 .hive-wrap {
   position: relative;
   width: 260px;
-  height: 240px;
+  height: 205px;
+  margin-top: -22px;
 }
 
 .hex-btn {
@@ -326,7 +331,7 @@ body {
 .btn.primary:hover { background: #3a3220; }
 
 /* Score */
-.score-section { width: 100%; }
+.score-section { width: 100%; order: 2; }
 .score-row {
   display: flex;
   justify-content: space-between;
@@ -372,7 +377,7 @@ body {
 }
 
 /* Found words */
-.found-section { width: 100%; }
+.found-section { width: 100%; order: 1; }
 .found-header {
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -382,7 +387,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.found-words { display: flex; flex-wrap: wrap; gap: 6px; }
+.found-words { display: flex; flex-wrap: wrap; gap: 6px; min-height: 150px; align-content: flex-start; }
 .word-chip {
   background: white;
   border: 1.5px solid var(--gold);
@@ -433,7 +438,8 @@ body {
 .about-section {
   background: white;
   border-top: 1px solid var(--border);
-  padding: 56px 24px;
+  margin-top: 40px;
+  padding: 72px 24px;
 }
 .about-inner {
   max-width: 700px;
@@ -585,13 +591,13 @@ footer a { color: var(--gold); text-decoration: none; }
     </div>
     <nav class="header-nav">
       <a href="https://theshofarbee.substack.com/" class="nav-btn" target="_blank">Substack</a>
-      <a href="day1.html" class="nav-btn">Day 1 ↩</a>
-      <a href="day2.html" class="nav-btn">Day 2 ↩</a>
-      <a href="day4.html" class="nav-btn">Day 4 →</a>
-      <a href="day5.html" class="nav-btn">Day 5 →</a>
-      <a href="day6.html" class="nav-btn">Day 6 →</a>
+      <a href="day1.html" class="nav-btn">Day 1</a>
+      <a href="day2.html" class="nav-btn">Day 2</a>
+      <a href="day3.html" class="nav-btn primary">Day 3</a>
+      <a href="day4.html" class="nav-btn">Day 4</a>
+      <a href="day5.html" class="nav-btn">Day 5</a>
+      <a href="day6.html" class="nav-btn">Day 6</a>
       <a href="index.html" class="nav-btn">Day 7 →</a>
-      <a href="index.html#game" class="nav-btn primary">Play Today ↓</a>
     </nav>
   </div>
 </header>
@@ -599,19 +605,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-day">Day 3 · June 29, 2026</div>
     <h2 class="hero-theme">The Exodus</h2>
     <p class="hero-credit">From slavery to freedom</p>
-    <div class="hero-letters">
-      <div class="hero-letter">A</div>
-      <div class="hero-letter">D</div>
-      <div class="hero-letter center-letter">M</div>
-      <div class="hero-letter">I</div>
-      <div class="hero-letter">P</div>
-      <div class="hero-letter">R</div>
-      <div class="hero-letter">Y</div>
-    </div>
-    <a href="index.html#game" class="hero-cta">Play Today's Puzzle</a>
+    <a href="#game" class="hero-cta">Day 3 · June 29, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
 
@@ -643,10 +639,10 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0</span>
-      <span class="rank-tick">Good<br>6</span>
-      <span class="rank-tick">Solid<br>12</span>
-      <span class="rank-tick">Amazing<br>24</span>
-      <span class="rank-tick">Genius<br>48</span>
+      <span class="rank-tick">Good<br>5</span>
+      <span class="rank-tick">Solid<br>10</span>
+      <span class="rank-tick">Amazing<br>19</span>
+      <span class="rank-tick">Genius<br>38</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -657,21 +653,24 @@ footer a { color: var(--gold); text-decoration: none; }
       <span id="foundCount">0 found</span>
     </div>
     <div class="found-words" id="foundWords"></div>
-    <div style="text-align:center; margin-top: 16px;">
-      <button class="btn" id="revealBtn" onclick="revealWords()" style="background:#8B7355;color:white;border:none;padding:8px 24px;border-radius:20px;cursor:pointer;font-size:0.9rem;">
-        🔍 Reveal All Words
-      </button>
-      <div id="revealSection" style="display:none; margin-top:14px; text-align:left;">
-        <p style="color:#8B7355; font-size:0.85rem; margin-bottom:8px;"><em>Words you missed:</em></p>
-        <div id="missedWords" style="display:flex; flex-wrap:wrap; gap:6px;"></div>
-      </div>
+  </div>
+
+  <div style="width:100%; order:3; text-align:center; margin-top: 16px;">
+    <button class="btn" id="revealBtn" onclick="revealWords()" style="background:#8B7355;color:white;border:none;padding:8px 24px;border-radius:20px;cursor:pointer;font-size:0.9rem;">
+      🔍 Reveal All Words
+    </button>
+    <div id="revealSection" style="display:none; margin-top:14px; text-align:left;">
+      <p style="color:#8B7355; font-size:0.85rem; margin-bottom:8px;"><em>Words you missed:</em></p>
+      <div id="missedWords" style="display:flex; flex-wrap:wrap; gap:6px;"></div>
     </div>
   </div>
+
+  <p class="left-out-cta" style="text-align:center; font-size:0.82rem; color:#6b5d45; margin-top:4px; line-height:1.55; order:4; width:100%;">🐝 Found a word we left out? <a href="https://theshofarbee.substack.com/" target="_blank" style="color:#D4870A; font-weight:700; text-decoration:none;">Tell us on Substack</a> — best discoveries get a shout-out the next day!</p>
 
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter C</strong></li>
+      <li>Every word must contain the <strong>center letter M</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -688,17 +687,17 @@ footer a { color: var(--gold); text-decoration: none; }
   <div class="about-inner">
     <div>
       <div class="about-label">About the Puzzle</div>
-      <h3 class="about-title">A word game rooted in Jerusalem</h3>
+      <h3 class="about-title">A word game from Jerusalem</h3>
       <p class="about-body">
-        The Shofar Bee is a daily word puzzle created by <strong>Dina Raveh</strong> and <strong>Shalom Brenner</strong> in Jerusalem. Each puzzle is inspired by Israeli culture, history, and current events — from museum exhibitions to archaeological discoveries to the textures of everyday life in the city.<br><br>
-        Every day, find as many words as you can from 7 letters. Post your discoveries in the <a href="https://theshofarbee.substack.com/" target="_blank">Substack comments</a> — Reader Discoveries published the following day.
+        Inspired by Israeli culture and history — from museum exhibitions to archaeological discoveries to everyday life in the city.<br><br>
+        Find as many words as you can from 7 letters. Post your comments in the <a href="https://theshofarbee.substack.com/" target="_blank">Substack comments</a> — they will be published the following day.
       </p>
     </div>
     <div class="book-card">
       <div class="about-label">From the Publishers</div>
       <div class="book-title">Jolted by a Common Threat, We United</div>
       <p class="book-desc">Personal accounts from Israelis and diaspora Jews responding to the Hamas attack of October 7, 2023. Edited by Shalom Brenner & Marsha Bensoussan.</p>
-      <a href="https://dinaraveh974319.substack.com" class="book-link" target="_blank">Learn more →</a>
+      <a href="https://www.amazon.com/dp/B0H3RBD22Y" class="book-link" target="_blank">Learn more →</a>
     </div>
   </div>
 </section>
@@ -797,13 +796,13 @@ let score = 0;
 let outerLetters = [...PUZZLE.outer];
 
 // ── HIVE ────────────────────────────────────────────────────────────────────
-const CX = 130, CY = 120, DIST = 82;
+const CX = 130, CY = 100, DIST = 59;
 const ANGLES = [270, 330, 30, 90, 150, 210];
 
 function hexPoints(cx, cy, r) {
   let pts = [];
   for (let i = 0; i < 6; i++) {
-    let a = Math.PI / 180 * (60 * i - 30);
+    let a = Math.PI / 180 * (60 * i);
     pts.push(`${cx + r * Math.cos(a)},${cy + r * Math.sin(a)}`);
   }
   return pts.join(' ');
