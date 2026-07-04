@@ -70,7 +70,7 @@ body {
 
 .logo-sub {
   font-size: 0.68rem;
-  color: var(--stone);
+  color: #C3B085;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-top: 4px;
@@ -145,8 +145,8 @@ body {
 }
 
 .hero-credit {
-  font-size: 0.78rem;
-  color: var(--stone);
+  font-size: 0.82rem;
+  color: #D8C6A0;
   letter-spacing: 0.06em;
   margin-bottom: 32px;
 }
@@ -382,7 +382,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.found-words { display: flex; flex-wrap: wrap; gap: 6px; }
+.found-words { display: flex; flex-wrap: wrap; gap: 6px; min-height: 96px; align-content: flex-start; }
 .word-chip {
   background: white;
   border: 1.5px solid var(--gold);
@@ -657,6 +657,7 @@ footer a { color: var(--gold); text-decoration: none; }
       <span id="foundCount">0 found</span>
     </div>
     <div class="found-words" id="foundWords"></div>
+    <p style="text-align:center; font-size:0.82rem; color:#6b5d45; margin-top:16px; line-height:1.55;">🐝 Found a word we left out? <a href="https://theshofarbee.substack.com/" target="_blank" style="color:#D4870A; font-weight:700; text-decoration:none;">Tell us on Substack</a> — best discoveries get a shout-out the next day!</p>
     <div style="text-align:center; margin-top: 16px;">
       <button class="btn" id="revealBtn" onclick="revealWords()" style="background:#8B7355;color:white;border:none;padding:8px 24px;border-radius:20px;cursor:pointer;font-size:0.9rem;">
         🔍 Reveal All Words
