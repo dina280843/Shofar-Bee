@@ -49,16 +49,18 @@ body {
   max-width: 900px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 16px 0;
-  gap: 16px;
+  gap: 10px;
+  padding: 12px 0;
 }
 
 .logo {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
 }
 
 .logo-title {
@@ -74,13 +76,13 @@ body {
   color: #C3B085;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-top: 4px;
+  margin-top: 0;
 }
 
 .header-nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 8px;
 }
 
@@ -104,7 +106,7 @@ body {
 /* ── HERO ── */
 .hero {
   background: var(--dark);
-  padding: 48px 24px 56px;
+  padding: 34px 24px 26px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -147,10 +149,10 @@ body {
 }
 
 .hero-credit {
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   color: #D8C6A0;
-  letter-spacing: 0.06em;
-  margin-bottom: 32px;
+  letter-spacing: 0.04em;
+  margin-bottom: 22px;
 }
 
 /* Miniature honey display */
@@ -201,7 +203,7 @@ body {
 .game-section {
   max-width: 520px;
   margin: 0 auto;
-  padding: 22px 16px 40px;
+  padding: 14px 16px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -328,7 +330,7 @@ body {
 .btn.primary:hover { background: #3a3220; }
 
 /* Score */
-.score-section { width: 100%; }
+.score-section { width: 100%; order: 2; }
 .score-row {
   display: flex;
   justify-content: space-between;
@@ -374,7 +376,7 @@ body {
 }
 
 /* Found words */
-.found-section { width: 100%; }
+.found-section { width: 100%; order: 1; }
 .found-header {
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -593,7 +595,6 @@ footer a { color: var(--gold); text-decoration: none; }
       <a href="day4.html" class="nav-btn">Day 4 ↩</a>
       <a href="day5.html" class="nav-btn">Day 5 ↩</a>
       <a href="day6.html" class="nav-btn">Day 6 ↩</a>
-      <a href="#game" class="nav-btn primary">Play Today ↓</a>
     </nav>
   </div>
 </header>
@@ -601,10 +602,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-day">Day 7 · July 3, 2026</div>
     <h2 class="hero-theme">The Cairo Geniza</h2>
-    <p class="hero-credit">A thousand years of hidden manuscripts — what's the word for where they were kept?</p>
-    <a href="#game" class="hero-cta">Play Today's Puzzle</a>
+    <p class="hero-credit">A thousand years of hidden manuscripts — find the word for where they were kept.</p>
+    <a href="#game" class="hero-cta">Day 7 · July 3, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
 
