@@ -276,6 +276,7 @@ body {
   position: relative;
   width: 260px;
   height: 205px;
+  margin-top: -22px;
 }
 
 .hex-btn {
@@ -386,7 +387,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.found-words { display: flex; flex-wrap: wrap; gap: 6px; min-height: 96px; align-content: flex-start; }
+.found-words { display: flex; flex-wrap: wrap; gap: 6px; min-height: 150px; align-content: flex-start; }
 .word-chip {
   background: white;
   border: 1.5px solid var(--gold);
@@ -437,7 +438,8 @@ body {
 .about-section {
   background: white;
   border-top: 1px solid var(--border);
-  padding: 56px 24px;
+  margin-top: 40px;
+  padding: 72px 24px;
 }
 .about-inner {
   max-width: 700px;
@@ -650,17 +652,19 @@ footer a { color: var(--gold); text-decoration: none; }
       <span id="foundCount">0 found</span>
     </div>
     <div class="found-words" id="foundWords"></div>
-    <p style="text-align:center; font-size:0.82rem; color:#6b5d45; margin-top:16px; line-height:1.55;">🐝 Found a word we left out? <a href="https://theshofarbee.substack.com/" target="_blank" style="color:#D4870A; font-weight:700; text-decoration:none;">Tell us on Substack</a> — best discoveries get a shout-out the next day!</p>
-    <div style="text-align:center; margin-top: 16px;">
-      <button class="btn" id="revealBtn" onclick="revealWords()" style="background:#8B7355;color:white;border:none;padding:8px 24px;border-radius:20px;cursor:pointer;font-size:0.9rem;">
-        🔍 Reveal All Words
-      </button>
-      <div id="revealSection" style="display:none; margin-top:14px; text-align:left;">
-        <p style="color:#8B7355; font-size:0.85rem; margin-bottom:8px;"><em>Words you missed:</em></p>
-        <div id="missedWords" style="display:flex; flex-wrap:wrap; gap:6px;"></div>
-      </div>
+  </div>
+
+  <div style="width:100%; order:3; text-align:center; margin-top: 16px;">
+    <button class="btn" id="revealBtn" onclick="revealWords()" style="background:#8B7355;color:white;border:none;padding:8px 24px;border-radius:20px;cursor:pointer;font-size:0.9rem;">
+      🔍 Reveal All Words
+    </button>
+    <div id="revealSection" style="display:none; margin-top:14px; text-align:left;">
+      <p style="color:#8B7355; font-size:0.85rem; margin-bottom:8px;"><em>Words you missed:</em></p>
+      <div id="missedWords" style="display:flex; flex-wrap:wrap; gap:6px;"></div>
     </div>
   </div>
+
+  <p class="left-out-cta" style="text-align:center; font-size:0.82rem; color:#6b5d45; margin-top:4px; line-height:1.55; order:4; width:100%;">🐝 Found a word we left out? <a href="https://theshofarbee.substack.com/" target="_blank" style="color:#D4870A; font-weight:700; text-decoration:none;">Tell us on Substack</a> — best discoveries get a shout-out the next day!</p>
 
   <details class="rules-block">
     <summary>How to Play</summary>
@@ -682,10 +686,10 @@ footer a { color: var(--gold); text-decoration: none; }
   <div class="about-inner">
     <div>
       <div class="about-label">About the Puzzle</div>
-      <h3 class="about-title">A word game rooted in Jerusalem</h3>
+      <h3 class="about-title">A word game from Jerusalem</h3>
       <p class="about-body">
-        The Shofar Bee is a daily word puzzle created by <strong>Dina Raveh</strong> and <strong>Shalom Brenner</strong> in Jerusalem. Each puzzle is inspired by Israeli culture, history, and current events — from museum exhibitions to archaeological discoveries to the textures of everyday life in the city.<br><br>
-        Every day, find as many words as you can from 7 letters. Post your discoveries in the <a href="https://theshofarbee.substack.com/" target="_blank">Substack comments</a> — Reader Discoveries published the following day.
+        Inspired by Israeli culture and history — from museum exhibitions to archaeological discoveries to everyday life in the city.<br><br>
+        Find as many words as you can from 7 letters. Post your comments in the <a href="https://theshofarbee.substack.com/" target="_blank">Substack comments</a> — they will be published the following day.
       </p>
     </div>
     <div class="book-card">
