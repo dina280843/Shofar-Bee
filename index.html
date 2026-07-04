@@ -49,6 +49,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 16px 0;
@@ -78,8 +79,9 @@ body {
 
 .header-nav {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 8px;
-  flex-shrink: 0;
 }
 
 .nav-btn {
@@ -199,11 +201,11 @@ body {
 .game-section {
   max-width: 520px;
   margin: 0 auto;
-  padding: 40px 16px;
+  padding: 22px 16px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
 }
 
 /* Theme card */
@@ -271,7 +273,7 @@ body {
 .hive-wrap {
   position: relative;
   width: 260px;
-  height: 240px;
+  height: 205px;
 }
 
 .hex-btn {
@@ -717,9 +719,10 @@ const PUZZLE = {
   'CAVE','EAVE','EVER','HAVE','HIVE','RAVE','VEER','VICE',
   'CARVE','CHIVE','CIVIC','CRAVE','HEAVE','RIVER','VERVE','VICAR',
   'ARRIVE','CAVIAR','REVERE','REVIVE',
-  'ACHIEVE','ARCHIVE','RECEIVE'
+  'ACHIEVE','ARCHIVE','HEAVIER','RECEIVE',
+  'ACHIEVER','RECEIVER'
 ]),
-  maxScore: 100,
+  maxScore: 130,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -786,13 +789,13 @@ let score = 0;
 let outerLetters = [...PUZZLE.outer];
 
 // ── HIVE ────────────────────────────────────────────────────────────────────
-const CX = 130, CY = 120, DIST = 82;
+const CX = 130, CY = 100, DIST = 59;
 const ANGLES = [270, 330, 30, 90, 150, 210];
 
 function hexPoints(cx, cy, r) {
   let pts = [];
   for (let i = 0; i < 6; i++) {
-    let a = Math.PI / 180 * (60 * i - 30);
+    let a = Math.PI / 180 * (60 * i);
     pts.push(`${cx + r * Math.cos(a)},${cy + r * Math.sin(a)}`);
   }
   return pts.join(' ');
