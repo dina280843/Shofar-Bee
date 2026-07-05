@@ -597,6 +597,7 @@ footer a { color: var(--gold); text-decoration: none; }
       <a href="day4.html" class="nav-btn">Day 4 ↩</a>
       <a href="day5.html" class="nav-btn">Day 5 ↩</a>
       <a href="day6.html" class="nav-btn">Day 6 ↩</a>
+      <a href="day7.html" class="nav-btn">Day 7 ↩</a>
     </nav>
   </div>
 </header>
@@ -604,9 +605,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">The Cairo Geniza</h2>
-    <p class="hero-credit">A thousand years of hidden manuscripts — find the word for where they were kept.</p>
-    <a href="#game" class="hero-cta">Day 7 · July 3, 2026 &nbsp;— Play ↓</a>
+    <h2 class="hero-theme">Wheels of Freedom</h2>
+    <p class="hero-credit">By the sea at Caesarea, racing teams once thundered round the turning-posts — find what carried them.</p>
+    <a href="#game" class="hero-cta">Day 8 · July 6, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
 
@@ -615,8 +616,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>For a thousand years, the Jews of Old Cairo never destroyed a worn text bearing God's name — they laid it to rest in a synagogue storeroom. Nearly 400,000 fragments survived.</p>
-    <cite>— The Cairo Geniza, Ben Ezra Synagogue</cite>
+    <p>On the shore at Caesarea Maritima, Herod the Great built a great hippodrome where racing teams thundered past the turning-posts before roaring crowds.</p>
+    <cite>— The Herodian hippodrome, Caesarea Maritima</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -669,7 +670,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter V</strong></li>
+      <li>Every word must contain the <strong>center letter H</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -713,20 +714,19 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
-  day: 7,
-  date: 'July 3, 2026',
-  theme: 'The Cairo Geniza',
-  center: 'V',
-  outer: ['A', 'C', 'E', 'H', 'I', 'R'],
+  day: 8,
+  date: 'July 6, 2026',
+  theme: 'Wheels of Freedom — Chariot Races at Caesarea',
+  center: 'H',
+  outer: ['C', 'A', 'R', 'I', 'O', 'T'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'CAVE','EAVE','EVER','HAVE','HIVE','RAVE','VEER','VICE',
-  'CARVE','CHIVE','CIVIC','CRAVE','HEAVE','RIVER','VERVE','VICAR',
-  'ARRIVE','CAVIAR','REVERE','REVIVE',
-  'ACHIEVE','ARCHIVE','HEAVIER','RECEIVE',
-  'ACHIEVER','RECEIVER'
+  'CHAI','CHAR','CHAT','CHIA','CHIC','CHIT','HAIR','HOOT','HORA','ITCH','OATH','RICH','THAT',
+  'CHAIR','CHART','CHOIR','COACH','HATCH','HITCH','ROACH','TORAH','TORCH',
+  'COHORT','THATCH','THROAT',
+  'CHARIOT','HARICOT'
 ]),
-  maxScore: 130,
+  maxScore: 104,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -748,7 +748,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "ARCHIVE") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "CHARIOT") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }

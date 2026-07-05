@@ -596,8 +596,8 @@ footer a { color: var(--gold); text-decoration: none; }
       <a href="day3.html" class="nav-btn">Day 3</a>
       <a href="day4.html" class="nav-btn">Day 4</a>
       <a href="day5.html" class="nav-btn">Day 5</a>
-      <a href="day6.html" class="nav-btn primary">Day 6</a>
-      <a href="day7.html" class="nav-btn">Day 7</a>
+      <a href="day6.html" class="nav-btn">Day 6</a>
+      <a href="day7.html" class="nav-btn primary">Day 7</a>
       <a href="index.html" class="nav-btn">Day 8 →</a>
     </nav>
   </div>
@@ -606,9 +606,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">The Giant's Fall</h2>
-    <p class="hero-credit">Size isn't the whole story — can you find it?</p>
-    <a href="#game" class="hero-cta">Day 6 · July 2, 2026 &nbsp;— Play ↓</a>
+    <h2 class="hero-theme">The Cairo Geniza</h2>
+    <p class="hero-credit">A thousand years of hidden manuscripts — find the word for where they were kept.</p>
+    <a href="#game" class="hero-cta">Day 7 · July 3, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
 
@@ -617,8 +617,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>"Then said David to the Philistine, Thou comest to me with a sword... but I come to thee in the name of the LORD of hosts."</p>
-    <cite>— 1 Samuel 17:45</cite>
+    <p>For a thousand years, the Jews of Old Cairo never destroyed a worn text bearing God's name — they laid it to rest in a synagogue storeroom. Nearly 400,000 fragments survived.</p>
+    <cite>— The Cairo Geniza, Ben Ezra Synagogue</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -671,7 +671,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter A</strong></li>
+      <li>Every word must contain the <strong>center letter V</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -715,20 +715,20 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
-  day: 6,
-  date: 'July 2, 2026',
-  theme: "The Giant's Fall",
-  center: 'A',
-  outer: ['G', 'H', 'I', 'L', 'O', 'T'],
+  day: 7,
+  date: 'July 3, 2026',
+  theme: 'The Cairo Geniza',
+  center: 'V',
+  outer: ['A', 'C', 'E', 'H', 'I', 'R'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'AGITA','AGOG','AIOLI','ALGA','ALGAL','ALIGHT','ALIT','ALLOT','ALOHA','ALTO',
-  'ATILT','ATOLL','GAGA','GAIT','GALA','GALL','GALOOT','GLIA','GLOAT','GLOTTAL',
-  'GOAL','GOAT','GOLIATH','GOTTA','HAIL','HALAL','HALL','HALO','HALT','HATH',
-  'HATHA','HIATAL','HIGHTAIL','IOTA','LATH','LOATH','LOGGIA','OATH','OTALGIA',
-  'TAIGA','TAIL','TAILLIGHT','TALI','TALL','TALLIT','TATTOO','THAT','TOGA','TOTAL'
+  'CAVE','EAVE','EVER','HAVE','HIVE','RAVE','VEER','VICE',
+  'CARVE','CHIVE','CIVIC','CRAVE','HEAVE','RIVER','VERVE','VICAR',
+  'ARRIVE','CAVIAR','REVERE','REVIVE',
+  'ACHIEVE','ARCHIVE','HEAVIER','RECEIVE',
+  'ACHIEVER','RECEIVER'
 ]),
-  maxScore: 175,
+  maxScore: 130,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -750,7 +750,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "GOLIATH") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "ARCHIVE") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }
