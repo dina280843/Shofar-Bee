@@ -595,11 +595,11 @@ footer a { color: var(--gold); text-decoration: none; }
       <a href="day2.html" class="nav-btn">Day 2</a>
       <a href="day3.html" class="nav-btn">Day 3</a>
       <a href="day4.html" class="nav-btn">Day 4</a>
-      <a href="day5.html" class="nav-btn primary">Day 5</a>
+      <a href="day5.html" class="nav-btn">Day 5</a>
       <a href="day6.html" class="nav-btn">Day 6</a>
       <a href="day7.html" class="nav-btn">Day 7</a>
       <a href="day8.html" class="nav-btn">Day 8</a>
-      <a href="day9.html" class="nav-btn">Day 9</a>
+      <a href="day9.html" class="nav-btn primary">Day 9</a>
       <a href="index.html" class="nav-btn">Day 10 →</a>
     </nav>
   </div>
@@ -608,9 +608,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">Seven Lamps of Gold</h2>
-    <p class="hero-credit">A symbol of light from the Temple — can you find it?</p>
-    <a href="#game" class="hero-cta">Day 5 · July 1, 2026 &nbsp;— Play ↓</a>
+    <h2 class="hero-theme">By Her Own Hand</h2>
+    <p class="hero-credit">A Purim scroll, penned in 1767 by a woman's hand — find the word for that scroll.</p>
+    <a href="#game" class="hero-cta">Day 9 · July 6, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
 
@@ -619,8 +619,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>"Make a lampstand of pure gold... six branches extending from its sides, that its seven lamps may give light."</p>
-    <cite>— Exodus 25:31-37</cite>
+    <p>In Rome, on the 10th of Adar 5527 — February 1767 — Luna, daughter of Leone Ambron, completed an Esther Scroll in her own hand: one of only three such scrolls known to be signed by a woman, and the centrepiece of this exhibition.</p>
+    <cite>— Luna Ambron's Esther Scroll · Israel Museum, Jerusalem</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -673,7 +673,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter H</strong></li>
+      <li>Every word must contain the <strong>center letter M</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -717,19 +717,19 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
-  day: 5,
-  date: 'July 1, 2026',
-  theme: 'Seven Lamps of Gold',
-  center: 'H',
-  outer: ['A', 'E', 'M', 'N', 'O', 'R'],
+  day: 9,
+  date: 'July 6, 2026',
+  theme: 'The Whole Story — Purim / Scroll of Esther',
+  center: 'M',
+  outer: ['E', 'G', 'I', 'L', 'A', 'H'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'AHEM',
-  'HAMMER','HARE','HAREM','HARM','HEAR','HEARER','HENNA','HERE','HERO','HERON',
-  'HOME','HOMER','HOMEROOM','HONE','HONOR','HONOREE','HOORAH','HORA','HORMONE','HORN','HORROR',
-  'MENORAH'
+  'AHEM','GAME','GLAM','HELM','HEME','IMAM','LAMA','LAME','LIMA','LIME','MAGE','MAGI','MAIL','MAIM','MALE','MALL','MAMA','MEAL','MEGA','MEME','MILE','MILL','MIME',
+  'EMAIL','GAMMA','GIMME','GLEAM','IMAGE','LEMMA','LLAMA','MAGMA','MAMMA','MELEE',
+  'AMALGAM','MAMMAL','MEGILLA','MILEAGE',
+  'MEGILLAH'
 ]),
-  maxScore: 95,
+  maxScore: 115,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -751,7 +751,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "MENORAH") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "MEGILLAH") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }
