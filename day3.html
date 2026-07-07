@@ -853,7 +853,7 @@ function submitWord() {
   const word = current.join('');
   if (!word) return;
 
-  if (word.length < 4) { fail('Too short — need at least 4 letters'); return; }
+  if (word.length < 4) { fail('Too short — need at least 4 letters', true); return; }
   if (!word.includes(PUZZLE.center)) { fail(`Must contain the center letter ${PUZZLE.center}`); return; }
   if (found.has(word)) { fail('Already found!'); return; }
   if (!PUZZLE.words.has(word)) { fail('Not in word list'); return; }
@@ -877,11 +877,11 @@ function submitWord() {
   setTimeout(render, 700);
 }
 
-function fail(msg) {
+function fail(msg, keep) {
   showFb(msg, true);
   const el = document.getElementById('wordDisplay');
   el.classList.add('shake');
-  setTimeout(() => { el.className = 'word-display'; }, 400);
+  setTimeout(() => { if (keep) { el.className = 'word-display'; } else { current = []; render(); } }, 400);
 }
 
 function showFb(msg, isErr) {
