@@ -593,14 +593,14 @@ footer a { color: var(--gold); text-decoration: none; }
       <a href="https://theshofarbee.substack.com/" class="nav-btn" target="_blank">Substack</a>
       <a href="day1.html" class="nav-btn">Day 1</a>
       <a href="day2.html" class="nav-btn">Day 2</a>
-      <a href="day3.html" class="nav-btn primary">Day 3</a>
+      <a href="day3.html" class="nav-btn">Day 3</a>
       <a href="day4.html" class="nav-btn">Day 4</a>
       <a href="day5.html" class="nav-btn">Day 5</a>
       <a href="day6.html" class="nav-btn">Day 6</a>
       <a href="day7.html" class="nav-btn">Day 7</a>
       <a href="day8.html" class="nav-btn">Day 8</a>
       <a href="day9.html" class="nav-btn">Day 9</a>
-      <a href="day10.html" class="nav-btn">Day 10</a>
+      <a href="day10.html" class="nav-btn primary">Day 10</a>
       <a href="index.html" class="nav-btn">Day 11 →</a>
     </nav>
   </div>
@@ -609,9 +609,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">The Exodus</h2>
-    <p class="hero-credit">From slavery to freedom</p>
-    <a href="#game" class="hero-cta">Day 3 · June 29, 2026 &nbsp;— Play ↓</a>
+    <h2 class="hero-theme">The House of David</h2>
+    <p class="hero-credit">David united the tribes and made Jerusalem his capital — find the word for the realm he founded.</p>
+    <a href="#game" class="hero-cta">Day 10 · July 7, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
 
@@ -620,8 +620,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>"Let my people go."</p>
-    <cite>— Exodus 5:1</cite>
+    <p>Carved around 2,800 years ago, the Tel Dan Stele records an enemy king's boast of victory over the "House of David" — the earliest mention of David's dynasty ever found outside the Bible.</p>
+    <cite>— The Tel Dan Stele, Israel Museum, Jerusalem</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -674,7 +674,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter M</strong></li>
+      <li>Every word must contain the <strong>center letter K</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -718,22 +718,18 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
-  day: 3,
-  date: 'June 29, 2026',
-  theme: 'The Exodus',
-  center: 'M',
-  outer: ['A', 'D', 'I', 'P', 'R', 'Y'],
+  day: 10,
+  date: 'July 7, 2026',
+  theme: 'The House of David — Kingdom of Israel',
+  center: 'K',
+  outer: ['I', 'N', 'G', 'D', 'O', 'M'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'AMID','ARMADA','ARMY',
-  'DAMP','DRAM','DRAMA',
-  'IMAM','IMPAIR',
-  'MADAM','MAID','MAIM','MAMA','MAMMA','MAMMARY','MARM','MARRY','MAYDAY','MIDAIR','MIDDAY','MIDI','MYRIAD',
-  'PAMPA','PIMP','PRAM','PRIM','PRIMARY','PRIMP','PYRAMID',
-  'RAMADA','RAMP',
-  'YARDARM'
+  'KIND','KING','KINK','KOOK','MINK','MONK','NOOK','OINK',
+  'KIDDO','GINKGO','INKING','KIMONO',
+  'KIDDING','KINGDOM'
 ]),
-  maxScore: 130,
+  maxScore: 52,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -755,7 +751,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "PYRAMID") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "KINGDOM") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }

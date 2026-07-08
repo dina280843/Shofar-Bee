@@ -600,6 +600,7 @@ footer a { color: var(--gold); text-decoration: none; }
       <a href="day7.html" class="nav-btn">Day 7 ↩</a>
       <a href="day8.html" class="nav-btn">Day 8 ↩</a>
       <a href="day9.html" class="nav-btn">Day 9 ↩</a>
+      <a href="day10.html" class="nav-btn">Day 10 ↩</a>
     </nav>
   </div>
 </header>
@@ -607,9 +608,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">The House of David</h2>
-    <p class="hero-credit">David united the tribes and made Jerusalem his capital — find the word for the realm he founded.</p>
-    <a href="#game" class="hero-cta">Day 10 · July 7, 2026 &nbsp;— Play ↓</a>
+    <h2 class="hero-theme">The Last Stand</h2>
+    <p class="hero-credit">Above the Dead Sea, the last rebels of the Great Revolt chose freedom over Rome's chains — find the word for who they were.</p>
+    <a href="#game" class="hero-cta">Day 11 · July 8, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
 
@@ -618,8 +619,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>Carved around 2,800 years ago, the Tel Dan Stele records an enemy king's boast of victory over the "House of David" — the earliest mention of David's dynasty ever found outside the Bible.</p>
-    <cite>— The Tel Dan Stele, Israel Museum, Jerusalem</cite>
+    <p>Atop the desert fortress of Masada, the last fighters of the Great Revolt held out against the Roman legions — and in 73 CE chose to die free rather than live as slaves.</p>
+    <cite>— Masada, above the Dead Sea</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -672,7 +673,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter K</strong></li>
+      <li>Every word must contain the <strong>center letter Z</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -716,18 +717,19 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
-  day: 10,
-  date: 'July 7, 2026',
-  theme: 'The House of David — Kingdom of Israel',
-  center: 'K',
-  outer: ['I', 'N', 'G', 'D', 'O', 'M'],
+  day: 11,
+  date: 'July 8, 2026',
+  theme: 'The Last Stand — Masada & the Zealots',
+  center: 'Z',
+  outer: ['E', 'A', 'L', 'O', 'T', 'S'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'KIND','KING','KINK','KOOK','MINK','MONK','NOOK','OINK',
-  'KIDDO','GINKGO','INKING','KIMONO',
-  'KIDDING','KINGDOM'
+  'LAZE','OOZE','ZEAL','ZEST','ZETA','ZOOS',
+  'LAZES','OOZES','ZEALS','ZESTS','ZETAS',
+  'AZALEA','SLEAZE','ZEALOT',
+  'AZALEAS','SLEAZES','ZEALOTS'
 ]),
-  maxScore: 52,
+  maxScore: 77,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -749,7 +751,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "KINGDOM") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "ZEALOTS") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }
@@ -773,8 +775,8 @@ const RANKS = [
   { label: 'Beginner', min: 0 },
   { label: 'Good',     min: Math.round(totalScore * 0.10) },
   { label: 'Solid',    min: Math.round(totalScore * 0.25) },
-  { label: 'Amazing',  min: Math.round(totalScore * 0.42) },
-  { label: 'Great',    min: Math.round(totalScore * 0.58) },
+  { label: 'Great',    min: Math.round(totalScore * 0.42) },
+  { label: 'Amazing',  min: Math.round(totalScore * 0.58) },
   { label: 'Genius',   min: Math.round(totalScore * 0.75) },
   { label: '⭐ Queen Bee', min: totalScore },
 ];
