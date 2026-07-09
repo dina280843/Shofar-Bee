@@ -601,6 +601,7 @@ footer a { color: var(--gold); text-decoration: none; }
       <a href="day8.html" class="nav-btn">Day 8 ↩</a>
       <a href="day9.html" class="nav-btn">Day 9 ↩</a>
       <a href="day10.html" class="nav-btn">Day 10 ↩</a>
+      <a href="day11.html" class="nav-btn">Day 11 ↩</a>
     </nav>
   </div>
 </header>
@@ -608,9 +609,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">The Last Stand</h2>
-    <p class="hero-credit">Above the Dead Sea, the last rebels of the Great Revolt chose freedom over Rome's chains — find the word for who they were.</p>
-    <a href="#game" class="hero-cta">Day 11 · July 8, 2026 &nbsp;— Play ↓</a>
+    <h2 class="hero-theme">Illuminated Vows</h2>
+    <p class="hero-credit">For centuries a Jewish couple has signed a beautifully painted marriage contract — find the Hebrew word for it.</p>
+    <a href="#game" class="hero-cta">Day 12 · July 9, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
 
@@ -619,8 +620,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>Atop the desert fortress of Masada, the last fighters of the Great Revolt held out against the Roman legions — and in 73 CE chose to die free rather than live as slaves.</p>
-    <cite>— Masada, above the Dead Sea</cite>
+    <p>For centuries, Jewish couples have sealed their union with an illuminated marriage contract — a masterpiece of paper-cut borders, gold leaf, and hand-painted vows.</p>
+    <cite>— Illuminated marriage contracts, Israel Museum, Jerusalem</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -642,10 +643,11 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0</span>
-      <span class="rank-tick">Good<br>5</span>
-      <span class="rank-tick">Solid<br>10</span>
-      <span class="rank-tick">Amazing<br>19</span>
-      <span class="rank-tick">Genius<br>38</span>
+      <span class="rank-tick">Good<br>7</span>
+      <span class="rank-tick">Solid<br>16</span>
+      <span class="rank-tick">Great<br>27</span>
+      <span class="rank-tick">Amazing<br>38</span>
+      <span class="rank-tick">Genius<br>49</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -673,7 +675,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter Z</strong></li>
+      <li>Every word must contain the <strong>center letter B</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -717,19 +719,19 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
-  day: 11,
-  date: 'July 8, 2026',
-  theme: 'The Last Stand — Masada & the Zealots',
-  center: 'Z',
-  outer: ['E', 'A', 'L', 'O', 'T', 'S'],
+  day: 12,
+  date: 'July 9, 2026',
+  theme: 'Illuminated Vows — The Ketubah',
+  center: 'B',
+  outer: ['K', 'E', 'T', 'U', 'A', 'H'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'LAZE','OOZE','ZEAL','ZEST','ZETA','ZOOS',
-  'LAZES','OOZES','ZEALS','ZESTS','ZETAS',
-  'AZALEA','SLEAZE','ZEALOT',
-  'AZALEAS','SLEAZES','ZEALOTS'
+  'ABET','ABUT','BABE','BAKE','BATH','BEAK','BEAT','BEAU','BEET','BETA','BUTT','TUBA','TUBE',
+  'ABATE','BABKA','BATHE','BUTTE','KEBAB',
+  'HUBBUB',
+  'BATHTUB','KETUBAH'
 ]),
-  maxScore: 77,
+  maxScore: 65,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -751,7 +753,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "ZEALOTS") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "KETUBAH") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }

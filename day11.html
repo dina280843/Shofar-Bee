@@ -594,14 +594,14 @@ footer a { color: var(--gold); text-decoration: none; }
       <a href="day1.html" class="nav-btn">Day 1</a>
       <a href="day2.html" class="nav-btn">Day 2</a>
       <a href="day3.html" class="nav-btn">Day 3</a>
-      <a href="day4.html" class="nav-btn primary">Day 4</a>
+      <a href="day4.html" class="nav-btn">Day 4</a>
       <a href="day5.html" class="nav-btn">Day 5</a>
       <a href="day6.html" class="nav-btn">Day 6</a>
       <a href="day7.html" class="nav-btn">Day 7</a>
       <a href="day8.html" class="nav-btn">Day 8</a>
       <a href="day9.html" class="nav-btn">Day 9</a>
       <a href="day10.html" class="nav-btn">Day 10</a>
-      <a href="day11.html" class="nav-btn">Day 11</a>
+      <a href="day11.html" class="nav-btn primary">Day 11</a>
       <a href="index.html" class="nav-btn">Day 12 →</a>
     </nav>
   </div>
@@ -610,9 +610,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">Pilgrimage to Jerusalem</h2>
-    <p class="hero-credit">Aliyah la-Regel — going up to the Temple</p>
-    <a href="#game" class="hero-cta">Day 4 · June 30, 2026 &nbsp;— Play ↓</a>
+    <h2 class="hero-theme">The Last Stand</h2>
+    <p class="hero-credit">Above the Dead Sea, the last rebels of the Great Revolt chose freedom over Rome's chains — find the word for who they were.</p>
+    <a href="#game" class="hero-cta">Day 11 · July 8, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
 
@@ -621,8 +621,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>"I rejoiced when they said to me: 'Let us go up to the House of the LORD.'"</p>
-    <cite>— Psalm 122:1, A Song of Ascents</cite>
+    <p>Atop the desert fortress of Masada, the last fighters of the Great Revolt held out against the Roman legions — and in 73 CE chose to die free rather than live as slaves.</p>
+    <cite>— Masada, above the Dead Sea</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -675,7 +675,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter L</strong></li>
+      <li>Every word must contain the <strong>center letter Z</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -719,22 +719,19 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
-  day: 4,
-  date: 'June 30, 2026',
-  theme: 'Pilgrimage to Jerusalem',
-  center: 'L',
-  outer: ['G', 'I', 'M', 'P', 'R', 'S'],
+  day: 11,
+  date: 'July 8, 2026',
+  theme: 'The Last Stand — Masada & the Zealots',
+  center: 'Z',
+  outer: ['E', 'A', 'L', 'O', 'T', 'S'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'GILL','GILLS','GIRL','GIRLS','GRILL','GRILLS',
-  'ILLS',
-  'LIMP','LIMPS','LIPS','LISP','LISPS',
-  'MILL','MILLS','MILS',
-  'PILGRIM','PILGRIMS','PILL','PILLS',
-  'RILL','RILLS',
-  'SILL','SILLS','SLIM','SLIMS','SLIP','SLIPS','SPILL','SPILLS'
+  'LAZE','OOZE','ZEAL','ZEST','ZETA','ZOOS',
+  'LAZES','OOZES','ZEALS','ZESTS','ZETAS',
+  'AZALEA','SLEAZE','ZEALOT',
+  'AZALEAS','SLEAZES','ZEALOTS'
 ]),
-  maxScore: 107,
+  maxScore: 77,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -756,7 +753,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "PILGRIMS") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "ZEALOTS") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }
