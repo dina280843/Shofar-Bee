@@ -589,22 +589,7 @@ footer a { color: var(--gold); text-decoration: none; }
       <span class="logo-title">The Shofar Bee 🐝</span>
       <span class="logo-sub">A daily word puzzle from Jerusalem</span>
     </div>
-    <nav class="header-nav">
-      <a href="https://theshofarbee.substack.com/" class="nav-btn" target="_blank">Substack</a>
-      <a href="day1.html" class="nav-btn">Day 1</a>
-      <a href="day2.html" class="nav-btn primary">Day 2</a>
-      <a href="day3.html" class="nav-btn">Day 3</a>
-      <a href="day4.html" class="nav-btn">Day 4</a>
-      <a href="day5.html" class="nav-btn">Day 5</a>
-      <a href="day6.html" class="nav-btn">Day 6</a>
-      <a href="day7.html" class="nav-btn">Day 7</a>
-      <a href="day8.html" class="nav-btn">Day 8</a>
-      <a href="day9.html" class="nav-btn">Day 9</a>
-      <a href="day10.html" class="nav-btn">Day 10</a>
-      <a href="day11.html" class="nav-btn">Day 11</a>
-      <a href="day12.html" class="nav-btn">Day 12</a>
-      <a href="index.html" class="nav-btn">Day 13 →</a>
-    </nav>
+    <nav class="header-nav" id="sbnav"></nav>
   </div>
 </header>
 
@@ -717,6 +702,7 @@ footer a { color: var(--gold); text-decoration: none; }
   </div>
 </footer>
 
+<script src="schedule.js"></script>
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
@@ -955,6 +941,7 @@ function loadProgress() {
 
 buildHive();
 loadProgress();
+if (window.sbBuildNav) sbBuildNav(PUZZLE.day);
 </script>
 </body>
 </html>

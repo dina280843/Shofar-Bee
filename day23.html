@@ -596,9 +596,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">Wheels of Freedom</h2>
-    <p class="hero-credit">By the sea at Caesarea, racing teams once thundered round the turning-posts — find what carried them.</p>
-    <a href="#game" class="hero-cta">Day 8 · July 5, 2026 &nbsp;— Play ↓</a>
+    <h2 class="hero-theme">The Giving of the Law</h2>
+    <p class="hero-credit">Seven weeks after the Exodus, a people stood at a mountain and received the Law — find the name of the festival that remembers it.</p>
+    <a href="#game" class="hero-cta">Day 23 · July 22, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
 
@@ -607,8 +607,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>On the shore at Caesarea Maritima, Herod the Great built a great hippodrome where racing teams thundered past the turning-posts before roaring crowds.</p>
-    <cite>— The Herodian hippodrome, Caesarea Maritima</cite>
+    <p>Fifty days after leaving Egypt, Israel gathered at Sinai in thunder and cloud to receive the Torah — a festival now kept with all-night study and the season's first fruits.</p>
+    <cite>— The Festival of Weeks</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -630,10 +630,11 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0</span>
-      <span class="rank-tick">Good<br>5</span>
-      <span class="rank-tick">Solid<br>10</span>
-      <span class="rank-tick">Amazing<br>19</span>
-      <span class="rank-tick">Genius<br>38</span>
+      <span class="rank-tick">Good<br>9</span>
+      <span class="rank-tick">Solid<br>23</span>
+      <span class="rank-tick">Great<br>39</span>
+      <span class="rank-tick">Amazing<br>54</span>
+      <span class="rank-tick">Genius<br>70</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -661,7 +662,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter H</strong></li>
+      <li>Every word must contain the <strong>center letter U</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -706,20 +707,19 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
-  day: 8,
-  date: 'July 5, 2026',
-  theme: 'Wheels of Freedom — Chariot Races at Caesarea',
-  center: 'H',
-  outer: ['C', 'A', 'R', 'I', 'O', 'T'],
+  day: 23,
+  date: 'July 22, 2026',
+  theme: 'The Giving of the Law — Shavuot',
+  center: 'U',
+  outer: ['S', 'H', 'A', 'V', 'O', 'T'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'ARCH','CHAI','CHAR','CHAT','CHIA','CHIC','CHIT','HAIR','HART','HATH','HOOT','HORA','ITCH','OATH','RICH','THAT',
-  'CATCH','CHAIR','CHART','CHOIR','COACH','HATCH','HITCH','ROACH','TOOTH','TORAH','TORCH',
-  'ATTACH','COHORT','HOORAH','HORROR','THATCH','THROAT',
-  'ARCHAIC','CHAOTIC','CHARIOT','HARICOT',
-  'CHITCHAT','THORACIC'
+  'AUTO','AUTOS','HUSH','HUTS','OUST','OUSTS','OUTS','SHOUT',
+  'SHOUTS','SHUT','SHUTS','SHUSH','SOUTH','STOUT','STATUS','TAUT',
+  'THOU','THUS','TOUT','TOUTS','TUTU','TUTS','SHUTOUT','SHOOTOUT',
+  'SHAVUOT'
 ]),
-  maxScore: 172,
+  maxScore: 93,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -741,7 +741,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "CHARIOT") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "SHAVUOT") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }
