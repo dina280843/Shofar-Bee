@@ -602,7 +602,8 @@ footer a { color: var(--gold); text-decoration: none; }
       <a href="day9.html" class="nav-btn">Day 9</a>
       <a href="day10.html" class="nav-btn">Day 10</a>
       <a href="day11.html" class="nav-btn">Day 11</a>
-      <a href="index.html" class="nav-btn">Day 12 →</a>
+      <a href="day12.html" class="nav-btn">Day 12</a>
+      <a href="index.html" class="nav-btn">Day 13 →</a>
     </nav>
   </div>
 </header>
@@ -863,6 +864,7 @@ function submitWord() {
 
   addChip(word, isPangram);
   updateScore();
+  saveProgress();
 
   const msgs = isPangram
     ? ['⭐ PANGRAM! All 7 letters!', '🐝 Queen move!', '⭐ Magnificent!']
@@ -935,7 +937,24 @@ document.addEventListener('keydown', e => {
   if (all.includes(k)) addLetter(k);
 });
 
+function saveProgress() {
+  try { localStorage.setItem('sb_found_' + PUZZLE.day, JSON.stringify([...found])); } catch (e) {}
+}
+function loadProgress() {
+  let saved;
+  try { saved = JSON.parse(localStorage.getItem('sb_found_' + PUZZLE.day) || '[]'); } catch (e) { saved = []; }
+  saved.forEach(word => {
+    if (found.has(word) || !PUZZLE.words.has(word)) return;
+    found.add(word);
+    const isPangram = [...PUZZLE.outer, PUZZLE.center].every(l => word.includes(l));
+    score += (word.length === 4 ? 1 : word.length) + (isPangram ? 7 : 0);
+    addChip(word, isPangram);
+  });
+  updateScore();
+}
+
 buildHive();
+loadProgress();
 </script>
 </body>
 </html>
