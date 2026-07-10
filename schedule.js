@@ -25,7 +25,16 @@ window.SB_SCHEDULE = [
   { day: 20, date: '2026-07-19', file: 'day20.html' },
   { day: 21, date: '2026-07-20', file: 'day21.html' },
   { day: 22, date: '2026-07-21', file: 'day22.html' },
-  { day: 23, date: '2026-07-22', file: 'day23.html' }
+  { day: 23, date: '2026-07-22', file: 'day23.html' },
+  { day: 24, date: '2026-07-23', file: 'day24.html' },
+  { day: 25, date: '2026-07-24', file: 'day25.html' },
+  { day: 26, date: '2026-07-26', file: 'day26.html' },
+  { day: 27, date: '2026-07-27', file: 'day27.html' },
+  { day: 28, date: '2026-07-28', file: 'day28.html' },
+  { day: 29, date: '2026-07-29', file: 'day29.html' },
+  { day: 30, date: '2026-07-30', file: 'day30.html' },
+  { day: 31, date: '2026-07-31', file: 'day31.html' },
+  { day: 32, date: '2026-08-02', file: 'day32.html' }
 ];
 
 /* The puzzle that should be live now: the latest whose date is on or before
