@@ -46,7 +46,8 @@ $nl = "`r`n"
 $sb = New-Object System.Text.StringBuilder
 [void]$sb.Append('<div class="rank-ticks" id="rankTicks">' + $nl)
 foreach ($tk in $ticks) {
-  [void]$sb.Append('      <span class="rank-tick">' + $tk[0] + '<br>' + $tk[1] + '</span>' + $nl)
+  $v = if ("$($tk[1])" -eq 'All!') { 'All!' } else { "$($tk[1]) pts" }
+  [void]$sb.Append('      <span class="rank-tick">' + $tk[0] + '<br>' + $v + '</span>' + $nl)
 }
 [void]$sb.Append('    </div>')
 $newBlock = $sb.ToString()

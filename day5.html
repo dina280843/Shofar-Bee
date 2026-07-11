@@ -629,11 +629,12 @@ footer a { color: var(--gold); text-decoration: none; }
     </div>
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
-      <span class="rank-tick">Beginner<br>0</span>
-      <span class="rank-tick">Good<br>5</span>
-      <span class="rank-tick">Solid<br>10</span>
-      <span class="rank-tick">Amazing<br>19</span>
-      <span class="rank-tick">Genius<br>38</span>
+      <span class="rank-tick">Beginner<br>0 pts</span>
+      <span class="rank-tick">Good<br>10 pts</span>
+      <span class="rank-tick">Solid<br>24 pts</span>
+      <span class="rank-tick">Great<br>40 pts</span>
+      <span class="rank-tick">Amazing<br>55 pts</span>
+      <span class="rank-tick">Genius<br>71 pts</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -774,7 +775,7 @@ const RANKS = [
   var t = document.getElementById('rankTicks');
   if (t) t.innerHTML = RANKS.map(function(r,i){
     var label = r.label === '⭐ Queen Bee' ? '⭐ Queen' : r.label;
-    var val = (i === RANKS.length - 1) ? 'All!' : r.min;
+    var val = (i === RANKS.length - 1) ? 'All!' : r.min + ' pts';
     return '<span class="rank-tick">' + label + '<br>' + val + '</span>';
   }).join('');
 })();
