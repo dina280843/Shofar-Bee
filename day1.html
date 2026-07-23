@@ -630,11 +630,11 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0 pts</span>
-      <span class="rank-tick">Good<br>19 pts</span>
-      <span class="rank-tick">Solid<br>47 pts</span>
-      <span class="rank-tick">Great<br>79 pts</span>
-      <span class="rank-tick">Amazing<br>109 pts</span>
-      <span class="rank-tick">Genius<br>141 pts</span>
+      <span class="rank-tick">Good<br>98 pts</span>
+      <span class="rank-tick">Solid<br>244 pts</span>
+      <span class="rank-tick">Great<br>410 pts</span>
+      <span class="rank-tick">Amazing<br>566 pts</span>
+      <span class="rank-tick">Genius<br>732 pts</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -714,12 +714,28 @@ const PUZZLE = {
   outer: ['R', 'U', 'S', 'A', 'D', 'E'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'ACRE','ARCADE','CARD','CARE','CAREER','CASE','CAUSE','CEASE','CEDAR',
-  'CREASE','CREED','CRUDE','CURE','CURSE','DECADE','DECREE','RACE','RACER',
-  'REDUCE','RESCUE','SACRED','SAUCE','SAUCER','SCARE','SCARCE','SECURE','SEDUCE',
-  'SUCCEED','SUCCESS','CASCADE','CRUSADE','CRUSADER','CRUSADES'
+  'ACED','ACES','ACRE','ACRES','ARCADE','ARCADES','ARCED','ARCS',
+  'CADRE','CADRES','CADS','CARD','CARDS','CARDED','CARDER','CARDERS',
+  'CARE','CARED','CARER','CARERS','CARES','CAREER','CAREERS','CARESS',
+  'CARESSED','CARESSES','CARS','CASCADE','CASCADES','CASE','CASED','CASES',
+  'CAUCUS','CAUCUSES','CAUSE','CAUSED','CAUSER','CAUSERS','CAUSES','CEASE',
+  'CEASED','CEASES','CEDAR','CEDARS','CEDE','CEDED','CEDES','CREASE',
+  'CREASED','CREASES','CREED','CREEDS','CRESS','CRUDE','CRUDER','CRUDES',
+  'CUED','CURD','CURDS','CURE','CURED','CURER','CURERS','CURES',
+  'CURSE','CURSED','CURSES','DECADE','DECADES','DECEASE','DECEASED','DECEASES',
+  'DECREASE','DECREASED','DECREASES','DECREE','DECREED','DECREES','DEDUCE','DEDUCED',
+  'DEDUCES','DEUCE','DEUCES','RACE','RACED','RACER','RACERS','RACES',
+  'RECEDE','RECEDED','RECEDES','RECESS','RECESSES','RECUR','RECURS','REDUCE',
+  'REDUCED','REDUCER','REDUCERS','REDUCES','RESCUE','RESCUED','RESCUER','RESCUERS',
+  'RESCUES','SACRED','SAUCE','SAUCED','SAUCER','SAUCERS','SAUCES','SCAR',
+  'SCARS','SCARE','SCARED','SCARER','SCARES','SCARCE','SCARCER','SCARRED',
+  'SCUD','SCUDS','SECEDE','SECEDED','SECEDES','SECURE','SECURED','SECURER',
+  'SECURES','SEDUCE','SEDUCED','SEDUCER','SEDUCERS','SEDUCES','SUCCEED','SUCCEEDS',
+  'SUCCESS','SUCCESSES','ACCEDE','ACCEDED','ACCEDES','ACCESS','ACCESSED','ACCESSES',
+  'ACCRUE','ACCRUED','ACCRUES','ACCUSE','ACCUSED','ACCUSER','ACCUSERS','ACCUSES',
+  'ADDUCE','ADDUCED','ADDUCES','CRUSADE','CRUSADED','CRUSADER','CRUSADERS','CRUSADES'
 ]),
-  maxScore: 188,
+  maxScore: 976,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {

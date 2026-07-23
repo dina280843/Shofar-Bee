@@ -630,11 +630,11 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0 pts</span>
-      <span class="rank-tick">Good<br>21 pts</span>
-      <span class="rank-tick">Solid<br>53 pts</span>
-      <span class="rank-tick">Great<br>89 pts</span>
-      <span class="rank-tick">Amazing<br>122 pts</span>
-      <span class="rank-tick">Genius<br>158 pts</span>
+      <span class="rank-tick">Good<br>47 pts</span>
+      <span class="rank-tick">Solid<br>118 pts</span>
+      <span class="rank-tick">Great<br>199 pts</span>
+      <span class="rank-tick">Amazing<br>274 pts</span>
+      <span class="rank-tick">Genius<br>355 pts</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -714,14 +714,18 @@ const PUZZLE = {
   outer: ['P', 'A', 'S', 'O', 'E', 'R'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'AVER','EAVE','EAVES','EVER','OVER','OVERS','PAVE','PAVER',
-  'PAVES','PEEVE','PROVE','PROVER','PROVES','RAVE','RAVER','RAVES',
-  'REEVE','REVERE','REVERSE','ROVE','ROVER','ROVERS','SAVE','SAVER',
-  'SAVES','SAVOR','SAVORS','SERVE','SERVER','SERVES','SEVER','SEVERE',
-  'VAPOR','VAPORS','VASE','VEER','VERSE','VERVE','VESPER','VESPERS',
-  'APPROVE','PRESERVE','POPOVER','PASSOVER'
+  'AVER','AVERS','EAVE','EAVES','EVER','OVER','OVERS','PAVE',
+  'PAVES','PAVER','PAVERS','PEEVE','PEEVES','PROVE','PROVES','PROVER',
+  'PROVERS','RAVE','RAVES','RAVER','RAVERS','REEVE','REEVES','REVERE',
+  'REVERES','REVERSE','REVERSES','ROVE','ROVES','ROVER','ROVERS','SAVE',
+  'SAVES','SAVER','SAVERS','SAVOR','SAVORS','SERVE','SERVES','SERVER',
+  'SERVERS','SEVER','SEVERS','SEVERE','VAPE','VAPES','VAPOR','VAPORS',
+  'VASE','VASES','VEER','VEERS','VERSE','VERSES','VERVE','VESPER',
+  'VESPERS','APPROVE','APPROVES','APPROVER','APPROVERS','PRESERVE','PRESERVES','PRESERVER',
+  'PRESERVERS','REPROVE','REPROVES','RESERVE','RESERVES','PERVERSE','POPOVER','POPOVERS',
+  'OVERSEE','OVERSEER','OVERSEERS','OVERSEA','OVERSEAS','REPAVE','REPAVES','PASSOVER'
 ]),
-  maxScore: 211,
+  maxScore: 473,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {

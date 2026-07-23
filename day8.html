@@ -630,11 +630,11 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0 pts</span>
-      <span class="rank-tick">Good<br>17 pts</span>
-      <span class="rank-tick">Solid<br>43 pts</span>
-      <span class="rank-tick">Great<br>72 pts</span>
-      <span class="rank-tick">Amazing<br>100 pts</span>
-      <span class="rank-tick">Genius<br>129 pts</span>
+      <span class="rank-tick">Good<br>19 pts</span>
+      <span class="rank-tick">Solid<br>48 pts</span>
+      <span class="rank-tick">Great<br>80 pts</span>
+      <span class="rank-tick">Amazing<br>110 pts</span>
+      <span class="rank-tick">Genius<br>143 pts</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -714,13 +714,14 @@ const PUZZLE = {
   outer: ['C', 'A', 'R', 'I', 'O', 'T'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'ARCH','CHAI','CHAR','CHAT','CHIA','CHIC','CHIT','HAIR','HART','HATH','HOOT','HORA','ITCH','OATH','RICH','THAT',
-  'CATCH','CHAIR','CHART','CHOIR','COACH','HATCH','HITCH','ROACH','TOOTH','TORAH','TORCH',
-  'ATTACH','COHORT','HOORAH','HORROR','THATCH','THROAT',
-  'ARCHAIC','CHAOTIC','CHARIOT','HARICOT',
-  'CHITCHAT','THORACIC'
+  'ARCH','CHAI','CHAR','CHAT','CHIA','CHIC','CHIT','HAIR',
+  'HART','HATH','HOOT','HORA','ITCH','OATH','RICH','THAT',
+  'CATCH','CHAIR','CHART','CHOIR','COACH','HATCH','HITCH','ROACH',
+  'TOOTH','TORAH','TORCH','ATTACH','COHORT','HOORAH','HORROR','THATCH',
+  'THROAT','ARCHAIC','CHAOTIC','CHARIOT','HARICOT','CHITCHAT','THORACIC','HOAR',
+  'HOOCH','TACH','AITCH','CHACHA'
 ]),
-  maxScore: 172,
+  maxScore: 190,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {

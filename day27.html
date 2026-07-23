@@ -630,11 +630,11 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0 pts</span>
-      <span class="rank-tick">Good<br>15 pts</span>
-      <span class="rank-tick">Solid<br>39 pts</span>
-      <span class="rank-tick">Great<br>65 pts</span>
-      <span class="rank-tick">Amazing<br>89 pts</span>
-      <span class="rank-tick">Genius<br>116 pts</span>
+      <span class="rank-tick">Good<br>22 pts</span>
+      <span class="rank-tick">Solid<br>55 pts</span>
+      <span class="rank-tick">Great<br>93 pts</span>
+      <span class="rank-tick">Amazing<br>128 pts</span>
+      <span class="rank-tick">Genius<br>166 pts</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -714,13 +714,15 @@ const PUZZLE = {
   outer: ['P', 'R', 'O', 'V', 'E', 'S'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'BEEP','BEEPS','BEER','BEERS','BEES','BORE','BORER','BORES',
-  'BOSS','BROS','EBBS','OBOE','OBOES','ORBS','PROBE','PROBES',
-  'PROVERB','PROVERBS','REVERB','REVERBS','ROBBER','ROBBERS','ROBE','ROBES',
-  'ROBS','SOBER','SOBERS','SOBS','VERB','VERBS','VERBOSE','OBSERVE',
-  'OBSERVER','OBSERVES','OBSESS'
+  'BEEP','BEEPS','BEER','BEERS','BEES','BOBS','BOBBER','BOBBERS',
+  'BOOB','BOOBS','BOOR','BOORS','BOOS','BORE','BORER','BORES',
+  'BOSS','BROS','BROSE','EBBS','OBOE','OBOES','OBSERVE','OBSERVER',
+  'OBSERVERS','OBSERVES','OBSESS','OBVERSE','ORBS','PROBE','PROBER','PROBERS',
+  'PROBES','PROVERB','PROVERBS','REVERB','REVERBS','ROBBER','ROBBERS','ROBE',
+  'ROBES','ROBS','SOBER','SOBERS','SOBS','SORB','SORBS','VERB',
+  'VERBS','VERBOSE'
 ]),
-  maxScore: 154,
+  maxScore: 221,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
