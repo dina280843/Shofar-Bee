@@ -596,9 +596,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">The Festival of Freedom</h2>
-    <p class="hero-credit">Carried out of Spain in the expulsion of 1492, a Seder plate still sets the table for freedom — find the name of the festival.</p>
-    <a href="#game" class="hero-cta">Day 25 · July 24, 2026 &nbsp;— Play ↓</a>
+    <h2 class="hero-theme">The Dwelling Place</h2>
+    <p class="hero-credit">A portable sanctuary of gold, wood, and woven cloth, carried through the desert so God might dwell among the people — find its Hebrew name.</p>
+    <a href="#game" class="hero-cta">Day 35 · August 5, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
 
@@ -607,8 +607,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>When the Jews were driven from Spain in 1492, some carried little but their faith — and treasures like this Passover plate, which crossed borders and centuries to grace the Seder table where the story of freedom is retold each spring.</p>
-    <cite>— A Passover plate from Spain, Israel Museum, Jerusalem</cite>
+    <p>In the wilderness, Israel built a portable sanctuary of gold and woven cloth — a tent of meeting where the divine presence rested and travelled with the people, prefiguring the Temple that would one day rise in Jerusalem.</p>
+    <cite>— The Tabernacle in the wilderness</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -630,11 +630,11 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0 pts</span>
-      <span class="rank-tick">Good<br>48 pts</span>
-      <span class="rank-tick">Solid<br>120 pts</span>
-      <span class="rank-tick">Great<br>201 pts</span>
-      <span class="rank-tick">Amazing<br>278 pts</span>
-      <span class="rank-tick">Genius<br>359 pts</span>
+      <span class="rank-tick">Good<br>14 pts</span>
+      <span class="rank-tick">Solid<br>35 pts</span>
+      <span class="rank-tick">Great<br>59 pts</span>
+      <span class="rank-tick">Amazing<br>82 pts</span>
+      <span class="rank-tick">Genius<br>106 pts</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -662,7 +662,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter V</strong></li>
+      <li>Every word must contain the <strong>center letter C</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -707,26 +707,20 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
-  day: 25,
-  date: 'July 24, 2026',
-  theme: 'The Festival of Freedom — Passover',
-  center: 'V',
-  outer: ['P', 'A', 'S', 'O', 'E', 'R'],
+  day: 35,
+  date: 'August 5, 2026',
+  theme: 'The Dwelling Place — Mishkan',
+  center: 'K',
+  outer: ['M', 'I', 'S', 'H', 'A', 'N'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'AVER','AVERS','EAVE','EAVES','EVER','OVER','OVERS','PAVE',
-  'PAVES','PAVER','PAVERS','PEEVE','PEEVES','PROVE','PROVES','PROVER',
-  'PROVERS','RAVE','RAVES','RAVER','RAVERS','REEVE','REEVES','REVERE',
-  'REVERES','REVERSE','REVERSES','ROVE','ROVES','ROVER','ROVERS','SAVE',
-  'SAVES','SAVER','SAVERS','SAVOR','SAVORS','SERVE','SERVES','SERVER',
-  'SERVERS','SEVER','SEVERS','SEVERE','VAPE','VAPES','VAPOR','VAPORS',
-  'VASE','VASES','VEER','VEERS','VERSE','VERSES','VERVE','VESPER',
-  'VESPERS','APPROVE','APPROVES','APPROVER','APPROVERS','PRESERVE','PRESERVES','PRESERVER',
-  'PRESERVERS','REPROVE','REPROVES','RESERVE','RESERVES','PERVERSE','POPOVER','POPOVERS',
-  'OVERSEE','OVERSEER','OVERSEERS','OVERSEA','OVERSEAS','REPAVE','REPAVES','PASSOVER',
-  'AVERSE'
+  'AKIN','ASKS','HANK','INKS','KHAN','KINK','KINS','KISS',
+  'MASK','MINK','SANK','SINK','SKIM','SKIN','SKIS','KASHA',
+  'KNISH','HANKS','KHAKI','KHANS','KINKS','MASKS','MINKS','SHANK',
+  'SINKS','SKIMS','SKINS','SKINK','KISHKA','KHAKIS','SHANKS','KISHKAS',
+  'MANIKIN','KINSMAN','MANIKINS','MISHKAN'
 ]),
-  maxScore: 479,
+  maxScore: 141,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -748,7 +742,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "PASSOVER") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "MISHKAN") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }
