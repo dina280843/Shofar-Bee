@@ -1,0 +1,37 @@
+# The Shofar Bee — what GitHub Pages actually serves is:
+#   index.html, day*.html, schedule.js, shofar-bee-banner.png,
+#   .nojekyll, README.md and tools/*.ps1
+# Everything below is working material that lives in the same folder
+# but should stay out of the repo, so `git status` only shows real
+# changes to the site.
+
+# ── Source documents, research and exports ───────────────────────
+*.doc
+*.docx
+*.docm
+*.pdf
+*.ppt
+*.pptx
+*.zip
+*.lnk
+*.jpg
+Graph.png
+
+# ── Solver output and puzzle word lists ──────────────────────────
+*.txt
+
+# ── Draft puzzle pages (only day*.html / index.html are published) ─
+DRAFT_*.html
+
+# ── Ad-hoc working folders ───────────────────────────────────────
+files for day 7/
+files for fixing Day 6/
+new puzzle word lists*/
+New words*/
+
+# ── Office / editor temp and lock files ──────────────────────────
+~$*
+*.tmp
+
+# ── Local tooling config ─────────────────────────────────────────
+.claude/
