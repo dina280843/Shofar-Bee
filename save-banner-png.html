@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head><title>Save Banner as PNG</title></head>
+<body style="background:#222;display:flex;flex-direction:column;align-items:center;padding:30px;font-family:sans-serif;color:white;">
+<h2>Shofar Bee Banner — Save as PNG</h2>
+<canvas id="c" width="1344" height="256" style="max-width:100%;border:1px solid #C9A84C;"></canvas>
+<br><br>
+<button onclick="download()" style="background:#C9A84C;color:#1a1508;border:none;padding:14px 36px;font-size:18px;font-weight:700;cursor:pointer;border-radius:4px;">Download banner.png</button>
+<script>
+const svg = `<svg width="1344" height="256" viewBox="0 0 1344 256" xmlns="http://www.w3.org/2000/svg">
+<rect width="1344" height="256" fill="#1a1508"/>
+<g opacity="0.18" fill="none" stroke="#C9A84C" stroke-width="1.5">
+  <polygon points="60,40 100,40 120,74 100,108 60,108 40,74" />
+  <polygon points="120,40 160,40 180,74 160,108 120,108 100,74" />
+  <polygon points="180,40 220,40 240,74 220,108 180,108 160,74" />
+  <polygon points="40,108 80,108 100,142 80,176 40,176 20,142" />
+  <polygon points="100,108 140,108 160,142 140,176 100,176 80,142" />
+  <polygon points="160,108 200,108 220,142 200,176 160,176 140,142" />
+  <polygon points="220,108 260,108 280,142 260,176 220,176 200,142" />
+  <polygon points="60,176 100,176 120,210 100,244 60,244 40,210" />
+  <polygon points="120,176 160,176 180,210 160,244 120,244 100,210" />
+  <polygon points="180,176 220,176 240,210 220,244 180,244 160,210" />
+</g>
+<g opacity="0.18" fill="none" stroke="#C9A84C" stroke-width="1.5">
+  <polygon points="1104,40 1144,40 1164,74 1144,108 1104,108 1084,74" />
+  <polygon points="1164,40 1204,40 1224,74 1204,108 1164,108 1144,74" />
+  <polygon points="1224,40 1264,40 1284,74 1264,108 1224,108 1204,74" />
+  <polygon points="1084,108 1124,108 1144,142 1124,176 1084,176 1064,142" />
+  <polygon points="1144,108 1184,108 1204,142 1184,176 1144,176 1124,142" />
+  <polygon points="1204,108 1244,108 1264,142 1244,176 1204,176 1184,142" />
+  <polygon points="1264,108 1304,108 1324,142 1304,176 1264,176 1244,142" />
+  <polygon points="1104,176 1144,176 1164,210 1144,244 1104,244 1084,210" />
+  <polygon points="1164,176 1204,176 1224,210 1204,244 1164,244 1144,210" />
+  <polygon points="1224,176 1264,176 1284,210 1264,244 1224,244 1204,210" />
+</g>
+<polygon points="240,40 280,40 300,74 280,108 240,108 220,74" fill="#C9A84C" opacity="0.12"/>
+<polygon points="1064,108 1104,108 1124,142 1104,176 1064,176 1044,142" fill="#C9A84C" opacity="0.12"/>
+<line x1="360" y1="88" x2="984" y2="88" stroke="#C9A84C" stroke-width="0.75" opacity="0.5"/>
+<line x1="360" y1="168" x2="984" y2="168" stroke="#C9A84C" stroke-width="0.75" opacity="0.5"/>
+<text x="672" y="106" font-family="Georgia, serif" font-size="52" font-weight="700" fill="#C9A84C" text-anchor="middle" letter-spacing="6">THE SHOFAR BEE</text>
+<text x="672" y="148" font-family="Georgia, serif" font-size="18" fill="#e8d8a0" text-anchor="middle" letter-spacing="3" opacity="0.85">A DAILY WORD PUZZLE FROM JERUSALEM</text>
+<rect x="592" y="175" width="160" height="26" rx="3" fill="none" stroke="#C9A84C" stroke-width="0.75" opacity="0.6"/>
+<text x="672" y="193" font-family="Georgia, serif" font-size="13" fill="#C9A84C" text-anchor="middle" letter-spacing="2" opacity="0.8">BY DINA &amp; SHALOM</text>
+</svg>`;
+
+const img = new Image();
+const blob = new Blob([svg], {type: 'image/svg+xml'});
+const url = URL.createObjectURL(blob);
+img.onload = function() {
+  const canvas = document.getElementById('c');
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0);
+  URL.revokeObjectURL(url);
+};
+img.src = url;
+
+function download() {
+  const canvas = document.getElementById('c');
+  const a = document.createElement('a');
+  a.download = 'shofar-bee-banner.png';
+  a.href = canvas.toDataURL('image/png');
+  a.click();
+}
+</script>
+</body>
+</html>
