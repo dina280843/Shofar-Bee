@@ -596,9 +596,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">Three Times a Year</h2>
-    <p class="hero-credit">Barley, then wheat, then the last fruit of the orchard — find the word that binds the three pilgrim festivals to the turning of the fields.</p>
-    <a href="#game" class="hero-cta">Day 37 · August 7, 2026 &nbsp;— Play ↓</a>
+    <h2 class="hero-theme">Where the City Haggles</h2>
+    <p class="hero-credit">Crates of dates, a butcher shouting over the crowd, bright hills of spice going cheap at dusk &mdash; find the word for the places where a city bargains for its dinner.</p>
+    <a href="#game" class="hero-cta">Day 45 · August 17, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
 
@@ -607,8 +607,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>Passover falls with the barley, Shavuot with the wheat, and Sukkot when the final fruit is gathered in. Israel's festivals were farmers' festivals first, timed to the crops and carried up to Jerusalem in baskets on the shoulder.</p>
-    <cite>— The pilgrim festivals</cite>
+    <p>Before refrigeration the whole week turned on a few crowded lanes: you bought what had come in that morning, argued the price down twice, and carried it home in a string bag while the light went orange and the shutters came rattling down for the Sabbath.</p>
+    <cite>&mdash; Mahane Yehuda, Jerusalem</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -630,11 +630,11 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0 pts</span>
-      <span class="rank-tick">Good<br>44 pts</span>
-      <span class="rank-tick">Solid<br>109 pts</span>
-      <span class="rank-tick">Great<br>183 pts</span>
-      <span class="rank-tick">Amazing<br>253 pts</span>
-      <span class="rank-tick">Genius<br>327 pts</span>
+      <span class="rank-tick">Good<br>35 pts</span>
+      <span class="rank-tick">Solid<br>88 pts</span>
+      <span class="rank-tick">Great<br>148 pts</span>
+      <span class="rank-tick">Amazing<br>204 pts</span>
+      <span class="rank-tick">Genius<br>264 pts</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -662,7 +662,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter V</strong></li>
+      <li>Every word must contain the <strong>center letter K</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -707,25 +707,24 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
-  day: 37,
-  date: 'August 7, 2026',
-  theme: 'Three Times a Year — Harvest',
-  center: 'V',
-  outer: ['H', 'A', 'R', 'E', 'S', 'T'],
+  day: 45,
+  date: 'August 17, 2026',
+  theme: 'Where the City Haggles - Markets',
+  center: 'K',
+  outer: ['M', 'A', 'R', 'E', 'T', 'S'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'EAVE','EVER','HAVE','RAVE','SAVE','VASE','VAST','VATS',
-  'VEER','VEST','VETS','AVERT','EAVES','HAVER','HAVES','HEAVE',
-  'RAVER','RAVES','SAVER','SAVES','SERVE','SEVER','SHAVE','STAVE',
-  'VASES','VEERS','VERSE','VERVE','VESTS','AVATAR','AVERSE','AVERTS',
-  'HEAVER','HEAVES','RAVERS','REVERE','REVERS','REVERT','SAVERS','SERVER',
-  'SERVES','SEVERE','SEVERS','SHAVER','SHAVES','SHEAVE','STARVE','STAVES',
-  'VASTER','VERSES','VETTER','AVATARS','HARVEST','HEAVERS','RESERVE','REVERES',
-  'REVERSE','REVERTS','SERVERS','SHAVERS','SHEAVES','STARVER','STARVES','VASTEST',
-  'VESTEES','HARVESTS','RESERVER','RESERVES','REVERSES','TRAVERSE','HARVESTER','RESERVERS',
-  'TRAVERSES','HARVESTERS'
+  'ARKS','ASKS','EARMARK','EARMARKS','EKES','KARAT','KARATE','KARATS',
+  'KARMA','MAKE','MAKER','MAKERS','MAKES','MARK','MARKER','MARKERS',
+  'MARKET','MARKETS','MARKS','MASK','MASKS','MEEK','MEERKAT','MEERKATS',
+  'RAKE','RAKES','REEK','REEKS','REMAKE','REMARK','REMARKS','RETAKE',
+  'RETAKES','SAKE','SEEK','SEEKER','SEEKERS','SEEKS','SKATE','SKATER',
+  'SKATERS','SKATES','STAKE','STAKES','STARK','STARKER','STARKEST','STEAK',
+  'STEAKS','STREAK','STREAKER','STREAKERS','STREAKS','TAKE','TAKER','TAKERS',
+  'TAKES','TASK','TASKMASTER','TASKS','TEAK','TEAKS','TREK','TREKKER',
+  'TREKKERS','TREKS'
 ]),
-  maxScore: 436,
+  maxScore: 352,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -747,7 +746,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "HARVEST") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "MARKETS") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }

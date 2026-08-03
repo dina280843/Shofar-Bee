@@ -596,9 +596,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">Three Times a Year</h2>
-    <p class="hero-credit">Barley, then wheat, then the last fruit of the orchard — find the word that binds the three pilgrim festivals to the turning of the fields.</p>
-    <a href="#game" class="hero-cta">Day 37 · August 7, 2026 &nbsp;— Play ↓</a>
+    <h2 class="hero-theme">Threads of Blue and Scarlet</h2>
+    <p class="hero-credit">Craftsmen &ldquo;filled with wisdom of heart&rdquo; worked blue, purple and scarlet into fine linen for the desert sanctuary &mdash; find the woven word.</p>
+    <a href="#game" class="hero-cta">Day 46 · August 18, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
 
@@ -607,8 +607,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>Passover falls with the barley, Shavuot with the wheat, and Sukkot when the final fruit is gathered in. Israel's festivals were farmers' festivals first, timed to the crops and carried up to Jerusalem in baskets on the shoulder.</p>
-    <cite>— The pilgrim festivals</cite>
+    <p>He filled them with wisdom of heart to work all manner of craft: of the engraver, of the skilful workman, of the embroiderer in blue and in purple, in scarlet and in fine linen, and of the weaver &mdash; makers of any work, and devisers of skilful designs.</p>
+    <cite>&mdash; Exodus 35:35</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -630,11 +630,11 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0 pts</span>
-      <span class="rank-tick">Good<br>44 pts</span>
-      <span class="rank-tick">Solid<br>109 pts</span>
-      <span class="rank-tick">Great<br>183 pts</span>
-      <span class="rank-tick">Amazing<br>253 pts</span>
-      <span class="rank-tick">Genius<br>327 pts</span>
+      <span class="rank-tick">Good<br>42 pts</span>
+      <span class="rank-tick">Solid<br>106 pts</span>
+      <span class="rank-tick">Great<br>178 pts</span>
+      <span class="rank-tick">Amazing<br>245 pts</span>
+      <span class="rank-tick">Genius<br>317 pts</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -662,7 +662,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter V</strong></li>
+      <li>Every word must contain the <strong>center letter Y</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -707,25 +707,26 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
-  day: 37,
-  date: 'August 7, 2026',
-  theme: 'Three Times a Year — Harvest',
-  center: 'V',
-  outer: ['H', 'A', 'R', 'E', 'S', 'T'],
+  day: 46,
+  date: 'August 18, 2026',
+  theme: 'Threads of Blue and Scarlet - Tapestry',
+  center: 'Y',
+  outer: ['T', 'A', 'P', 'E', 'S', 'R'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'EAVE','EVER','HAVE','RAVE','SAVE','VASE','VAST','VATS',
-  'VEER','VEST','VETS','AVERT','EAVES','HAVER','HAVES','HEAVE',
-  'RAVER','RAVES','SAVER','SAVES','SERVE','SEVER','SHAVE','STAVE',
-  'VASES','VEERS','VERSE','VERVE','VESTS','AVATAR','AVERSE','AVERTS',
-  'HEAVER','HEAVES','RAVERS','REVERE','REVERS','REVERT','SAVERS','SERVER',
-  'SERVES','SEVERE','SEVERS','SHAVER','SHAVES','SHEAVE','STARVE','STAVES',
-  'VASTER','VERSES','VETTER','AVATARS','HARVEST','HEAVERS','RESERVE','REVERES',
-  'REVERSE','REVERTS','SERVERS','SHAVERS','SHEAVES','STARVER','STARVES','VASTEST',
-  'VESTEES','HARVESTS','RESERVER','RESERVES','REVERSES','TRAVERSE','HARVESTER','RESERVERS',
-  'TRAVERSES','HARVESTERS'
+  'ARRAY','ARRAYS','ARTERY','ARTY','ASSAY','ASSAYS','ASTRAY','AYES',
+  'EASY','EATERY','ESSAY','ESSAYS','EYES','PAPAYA','PAPAYAS','PARRY',
+  'PARTY','PASTRY','PATSY','PATTY','PAYEE','PAYEES','PAYER','PAYERS',
+  'PAYS','PEPPERY','PEPPY','PETTY','PRAY','PRAYER','PRAYERS','PRAYS',
+  'PREPAY','PREPAYS','PREPPY','PRETTY','PREY','PREYS','PYRE','PYRES',
+  'RASPY','RATEPAYER','RATTY','RAYS','REPAY','REPAYS','RETYPE','SASSY',
+  'SATYR','SATYRS','SAYS','SPRAY','SPRAYER','SPRAYS','SPRY','SPRYER',
+  'STARRY','STAY','STAYS','STRAPPY','STRAY','STRAYS','STYE','STYES',
+  'TAPESTRY','TEARY','TERRY','TESTY','TRAY','TRAYS','TREATY','TRYST',
+  'TRYSTS','TYPE','TYPES','TYPESET','TYPESETS','TYPESETTER','TYRE','TYRES',
+  'YAPPER','YAPPY','YEAR','YEARS','YEAST','YEASTS'
 ]),
-  maxScore: 436,
+  maxScore: 423,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -747,7 +748,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "HARVEST") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "TAPESTRY") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }

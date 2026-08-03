@@ -596,8 +596,8 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">The Congregation Sings</h2>
-    <p class="hero-credit">Ancient modes, borrowed street tunes, and melodies welded to a single festival — find the word for voices joined in song.</p>
+    <h2 class="hero-theme">A Name That Endures</h2>
+    <p class="hero-credit">A candle lit, a stone set, a list of names read aloud — find the word for what a people build so that nothing is lost.</p>
     <a href="#game" class="hero-cta">Day 42 · August 13, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
@@ -607,8 +607,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>A congregation's music tells you where it has been: modes carried out of Babylon, tunes picked up in Spain or along the Rhine, and melodies bound so tightly to one festival that the opening note alone tells you the date.</p>
-    <cite>— Synagogue song</cite>
+    <p>Isaiah's promise of an everlasting name is the phrase that gives Yad Vashem its own. Remembrance in Jewish practice is not a mood but an obligation with a calendar: a flame kindled on the day, a page turned, a name spoken so it is still said.</p>
+    <cite>— Remembrance</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -630,11 +630,11 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0 pts</span>
-      <span class="rank-tick">Good<br>32 pts</span>
-      <span class="rank-tick">Solid<br>80 pts</span>
-      <span class="rank-tick">Great<br>134 pts</span>
-      <span class="rank-tick">Amazing<br>184 pts</span>
-      <span class="rank-tick">Genius<br>239 pts</span>
+      <span class="rank-tick">Good<br>28 pts</span>
+      <span class="rank-tick">Solid<br>69 pts</span>
+      <span class="rank-tick">Great<br>116 pts</span>
+      <span class="rank-tick">Amazing<br>161 pts</span>
+      <span class="rank-tick">Genius<br>208 pts</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -662,7 +662,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter H</strong></li>
+      <li>Every word must contain the <strong>center letter M</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -709,22 +709,22 @@ footer a { color: var(--gold); text-decoration: none; }
 const PUZZLE = {
   day: 42,
   date: 'August 13, 2026',
-  theme: 'The Congregation Sings — Chorale',
-  center: 'H',
-  outer: ['C', 'O', 'R', 'A', 'L', 'E'],
+  theme: 'A Name That Endures — Memorial',
+  center: 'M',
+  outer: ['E', 'O', 'R', 'I', 'A', 'L'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'ACHE','ARCH','CHAR','COHO','EACH','ECHO','HALE','HALL',
-  'HALO','HARE','HEAL','HEAR','HEEL','HELL','HERE','HERO',
-  'HOAR','HOER','HOLE','HORA','LOCH','RHEA','ACHOO','ALOHA',
-  'CACHE','CHARE','CHEER','CHORE','COACH','HALAL','HELLO','HOOCH',
-  'LARCH','LEACH','LEECH','OCHER','OCHRE','REACH','ROACH','ARCHER',
-  'CHORAL','CHOREA','COHERE','CRECHE','HEALER','HEARER','HOLLER','HOORAH',
-  'HORROR','ALCOHOL','ARCHAEA','CHALLAH','CHEERER','CHLORAL','CHOLERA','CHORALE',
-  'CHOREAL','COACHER','COCHLEA','EARACHE','LEACHER','REACHER','ARCHAEAL','CHARCOAL',
-  'COCHLEAR','HELLHOLE'
+  'AMMO','EMIR','IMAM','LAMA','LAME','LIME','LIMO','LOAM',
+  'LOOM','MAIL','MAIM','MALE','MALL','MAMA','MARE','MEAL',
+  'MEME','MEMO','MERE','MILE','MILL','MIME','MIRE','MOIL',
+  'MOLE','MOLL','MOOR','MORE','OMER','REAM','RIME','ROAM',
+  'ROOM','AIMER','ALARM','ARMOR','AROMA','EMAIL','EMMER','LAMER',
+  'LLAMA','MAMMA','MELEE','MILER','MIMEO','MIMER','MOLAR','MOMMA',
+  'MOOLA','MORAL','REALM','REARM','RIMER','AMORAL','MAILER','MAMMAL',
+  'MEMOIR','MILLER','MIRROR','MORALE','REMAIL','ROAMER','ROOMER','AIRMAIL',
+  'IMMORAL','MALARIA','MERRIER','LAMELLAR','MAILROOM','MALARIAL','MEMORIAL','IMMEMORIAL'
 ]),
-  maxScore: 318,
+  maxScore: 277,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -746,7 +746,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "CHORALE") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "MEMORIAL") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }

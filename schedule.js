@@ -38,13 +38,21 @@ window.SB_SCHEDULE = [
   { day: 33, date: '2026-08-03', file: 'day33.html' },
   { day: 34, date: '2026-08-04', file: 'day34.html' },
   { day: 35, date: '2026-08-05', file: 'day35.html' },
-  { day: 36, date: '2026-08-06', file: 'day36.html' },
+  /* Day 36 (Thu Aug 6) is RESERVED for Citadel, centre D. day36.html does not
+     exist yet - the word list is still to come. Restore this line the moment
+     it is built, or Aug 6 silently keeps Day 35 on screen:
+  { day: 36, date: '2026-08-06', file: 'day36.html' }, */
   { day: 37, date: '2026-08-07', file: 'day37.html' },
   { day: 38, date: '2026-08-09', file: 'day38.html' },
   { day: 39, date: '2026-08-10', file: 'day39.html' },
   { day: 40, date: '2026-08-11', file: 'day40.html' },
   { day: 41, date: '2026-08-12', file: 'day41.html' },
-  { day: 42, date: '2026-08-13', file: 'day42.html' }
+  { day: 42, date: '2026-08-13', file: 'day42.html' },
+  { day: 43, date: '2026-08-14', file: 'day43.html' },
+  { day: 44, date: '2026-08-16', file: 'day44.html' },
+  { day: 45, date: '2026-08-17', file: 'day45.html' },
+  { day: 46, date: '2026-08-18', file: 'day46.html' },
+  { day: 47, date: '2026-08-19', file: 'day47.html' }
 ];
 
 /* The puzzle that should be live now: the latest whose date is on or before

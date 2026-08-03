@@ -596,9 +596,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">The Book of Psalms</h2>
-    <p class="hero-credit">One hundred and fifty songs of praise, lament, and thanksgiving, sung since the days of David — find the name of the book that holds them.</p>
-    <a href="#game" class="hero-cta">Day 36 · August 6, 2026 &nbsp;— Play ↓</a>
+    <h2 class="hero-theme">The Congregation Sings</h2>
+    <p class="hero-credit">Ancient modes, borrowed street tunes, and melodies welded to a single festival — find the word for voices joined in song.</p>
+    <a href="#game" class="hero-cta">Day 43 · August 14, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
 
@@ -607,8 +607,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>Cries of anguish, shouts of joy, and quiet trust — the Psalms have served as the prayer book of Jews and the wider world for three thousand years, ascribed above all to David, the sweet singer of Israel.</p>
-    <cite>— The Psalms of David</cite>
+    <p>A congregation's music tells you where it has been: modes carried out of Babylon, tunes picked up in Spain or along the Rhine, and melodies bound so tightly to one festival that the opening note alone tells you the date.</p>
+    <cite>— Synagogue song</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -631,10 +631,10 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0 pts</span>
       <span class="rank-tick">Good<br>32 pts</span>
-      <span class="rank-tick">Solid<br>81 pts</span>
-      <span class="rank-tick">Great<br>136 pts</span>
-      <span class="rank-tick">Amazing<br>187 pts</span>
-      <span class="rank-tick">Genius<br>242 pts</span>
+      <span class="rank-tick">Solid<br>80 pts</span>
+      <span class="rank-tick">Great<br>134 pts</span>
+      <span class="rank-tick">Amazing<br>184 pts</span>
+      <span class="rank-tick">Genius<br>239 pts</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -662,7 +662,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter R</strong></li>
+      <li>Every word must contain the <strong>center letter H</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -707,25 +707,24 @@ footer a { color: var(--gold); text-decoration: none; }
 <script>
 // ── PUZZLE CONFIG — update this section each day ───────────────────────────
 const PUZZLE = {
-  day: 36,
-  date: 'August 6, 2026',
-  theme: 'The Book of Psalms — Psalter',
-  center: 'R',
-  outer: ['P', 'S', 'A', 'L', 'T', 'E'],
+  day: 43,
+  date: 'August 14, 2026',
+  theme: 'The Congregation Sings — Chorale',
+  center: 'H',
+  outer: ['C', 'O', 'R', 'A', 'L', 'E'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'ARTS','EARL','EARS','ERAS','PARE','PARS','PART','PEAR',
-  'PERT','PRAT','PREP','RAPE','RAPS','RAPT','RASP','RATE',
-  'RATS','REAL','REAP','REPS','REST','SEAR','SPAR','STAR',
-  'TARE','TARP','TART','TEAR','TRAP','TSAR','ALERT','ALTER',
-  'APART','ASTER','LASER','LATER','PALER','PARES','PARSE','PARTS',
-  'PEARL','PEARS','PRATE','PRATS','RAPES','REALS','SPARE','SPEAR',
-  'SPRAT','STARE','START','STRAP','TAPER','TARES','TARPS','TARTS',
-  'TASER','TATER','TEARS','TREAT','TSARS','ALERTS','ALTARS','ALTERS',
-  'ASTRAL','LASERS','PALTER','PASTER','PEARLS','PLATER','PRATES','SALTER',
-  'STALER','STRAPS','TAPERS','TATERS','SPRATS','PSALTER','PLASTER','STAPLER'
+  'ACHE','ARCH','CHAR','COHO','EACH','ECHO','HALE','HALL',
+  'HALO','HARE','HEAL','HEAR','HEEL','HELL','HERE','HERO',
+  'HOAR','HOER','HOLE','HORA','LOCH','RHEA','ACHOO','ALOHA',
+  'CACHE','CHARE','CHEER','CHORE','COACH','HALAL','HELLO','HOOCH',
+  'LARCH','LEACH','LEECH','OCHER','OCHRE','REACH','ROACH','ARCHER',
+  'CHORAL','CHOREA','COHERE','CRECHE','HEALER','HEARER','HOLLER','HOORAH',
+  'HORROR','ALCOHOL','ARCHAEA','CHALLAH','CHEERER','CHLORAL','CHOLERA','CHORALE',
+  'CHOREAL','COACHER','COCHLEA','EARACHE','LEACHER','REACHER','ARCHAEAL','CHARCOAL',
+  'COCHLEAR','HELLHOLE'
 ]),
-  maxScore: 323,
+  maxScore: 318,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -747,7 +746,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "PSALTER") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "CHORALE") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }

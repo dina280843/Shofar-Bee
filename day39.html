@@ -596,8 +596,8 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">How the City Drank</h2>
-    <p class="hero-credit">A city on a dry ridge with no river had to catch every drop of winter rain — find the word for the chambers hewn to hold it.</p>
+    <h2 class="hero-theme">The Book of Psalms</h2>
+    <p class="hero-credit">One hundred and fifty songs of praise, lament, and thanksgiving, sung since the days of David — find the name of the book that holds them.</p>
     <a href="#game" class="hero-cta">Day 39 · August 10, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
@@ -607,8 +607,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>Jerusalem has no great river. For three thousand years its people cut hollows into the rock beneath their houses, their courtyards and the Temple Mount itself, channelling the winter rains inside to carry them through the long dry summer.</p>
-    <cite>— Water beneath the stones</cite>
+    <p>Cries of anguish, shouts of joy, and quiet trust — the Psalms have served as the prayer book of Jews and the wider world for three thousand years, ascribed above all to David, the sweet singer of Israel.</p>
+    <cite>— The Psalms of David</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -630,11 +630,11 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0 pts</span>
-      <span class="rank-tick">Good<br>96 pts</span>
-      <span class="rank-tick">Solid<br>241 pts</span>
-      <span class="rank-tick">Great<br>404 pts</span>
-      <span class="rank-tick">Amazing<br>558 pts</span>
-      <span class="rank-tick">Genius<br>722 pts</span>
+      <span class="rank-tick">Good<br>32 pts</span>
+      <span class="rank-tick">Solid<br>81 pts</span>
+      <span class="rank-tick">Great<br>136 pts</span>
+      <span class="rank-tick">Amazing<br>187 pts</span>
+      <span class="rank-tick">Genius<br>242 pts</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -662,7 +662,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter C</strong></li>
+      <li>Every word must contain the <strong>center letter R</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -709,29 +709,23 @@ footer a { color: var(--gold); text-decoration: none; }
 const PUZZLE = {
   day: 39,
   date: 'August 10, 2026',
-  theme: 'How the City Drank — Cisterns',
-  center: 'C',
-  outer: ['I', 'S', 'T', 'E', 'R', 'N'],
+  theme: 'The Book of Psalms — Psalter',
+  center: 'R',
+  outer: ['P', 'S', 'A', 'L', 'T', 'E'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'CENT','CITE','ICER','ICES','NICE','RICE','SECS','SECT',
-  'CENTS','CIRRI','CITES','CRESS','CREST','CRIER','CRIES','ERECT',
-  'ICERS','ICIER','NICER','NIECE','RICIN','SCENE','SCENT','SECTS',
-  'SINCE','TINCT','TRICE','CENTER','CERISE','CITIES','CITRIC','CRESTS',
-  'CRETIN','CRIERS','CRISES','CRISIS','CRITIC','ENTICE','ERECTS','ICIEST',
-  'INCEST','INCISE','INCITE','INSECT','NICEST','NIECES','NITRIC','RECENT',
-  'RECESS','RECITE','RESECT','SCENES','SCENIC','SCENTS','SCREEN','SECRET',
-  'STERIC','STRICT','TINCTS','CENTERS','CENTRIC','CISTERN','CRETINS','CRITICS',
-  'CRITTER','ENTERIC','ENTICES','ESSENCE','ICINESS','INCENSE','INCISES','INCITER',
-  'INCITES','INSECTS','RECITER','RECITES','RESECTS','SCENICS','SCIENCE','SCREENS',
-  'SECRETE','SECRETS','SENESCE','SINCERE','CENTRIST','CISTERNS','CRESCENT','CRITTERS',
-  'ERECTERS','ESSENCES','INCITERS','INSTINCT','NICETIES','RECENTER','RECESSES','RECITERS',
-  'RESTRICT','RETICENT','SCIENCES','SENTENCE','CENTRISTS','CRESCENTS','CRITICISE','ECCENTRIC',
-  'ERECTNESS','INSINCERE','INSTINCTS','INTERSECT','INTRINSIC','RESTRICTS','RETICENCE','SCENERIES',
-  'SCIENTIST','SENESCENT','SENTENCES','SENTIENCE','CRITICISES','ECCENTRICS','INSISTENCE','INTERSECTS',
-  'INTERSTICE','SCIENTISTS','SENESCENCE','STRICTNESS','INTERNECINE','NECESSITIES','INSINCERITIES','ECCENTRICITIES'
+  'ARTS','EARL','EARS','ERAS','PARE','PARS','PART','PEAR',
+  'PERT','PRAT','PREP','RAPE','RAPS','RAPT','RASP','RATE',
+  'RATS','REAL','REAP','REPS','REST','SEAR','SPAR','STAR',
+  'TARE','TARP','TART','TEAR','TRAP','TSAR','ALERT','ALTER',
+  'APART','ASTER','LASER','LATER','PALER','PARES','PARSE','PARTS',
+  'PEARL','PEARS','PRATE','PRATS','RAPES','REALS','SPARE','SPEAR',
+  'SPRAT','STARE','START','STRAP','TAPER','TARES','TARPS','TARTS',
+  'TASER','TATER','TEARS','TREAT','TSARS','ALERTS','ALTARS','ALTERS',
+  'ASTRAL','LASERS','PALTER','PASTER','PEARLS','PLATER','PRATES','SALTER',
+  'STALER','STRAPS','TAPERS','TATERS','SPRATS','PSALTER','PLASTER','STAPLER'
 ]),
-  maxScore: 962,
+  maxScore: 323,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -753,7 +747,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "CISTERNS") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "PSALTER") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }
