@@ -267,7 +267,7 @@ try {
         Add-Rule $slide $x0 ($MT + 24) $cw $GOLD 1.0 | Out-Null
         $body = @(
           ('Every puzzle gives you seven letters arranged in a hive. Make as many words as you can, and every word must use the letter in the middle ' + $MDASH + ' the gold one. The other six are yours to use as often as you like, or not at all.'), '',
-          'Words must be at least four letters long. Proper nouns are out. Letters may repeat within a word.', '',
+          'Words must be at least four letters long, and letters may repeat within a word. Proper nouns are normally out, though a handful of famous names stand as pangrams where the theme asks for one.', '',
           ('One word in each puzzle uses all seven letters. It is called a pangram, and it is worth an extra seven points. Every pangram in this book is tied to the theme of its page ' + $MDASH + ' the picture, the verse, the place. If you are stuck, read the passage again.'), '',
           'Scoring: a four-letter word is one point. Any longer word scores its own length. A pangram adds seven. The ladder at the foot of each writing page tells you how you are doing, and what a perfect score would be.', '',
           ('The puzzles ran daily through the summer of 2026 and are printed here in the order they appeared. All the answers are gathered at the back ' + $MDASH + ' no peeking at the facing page.'))
