@@ -38,10 +38,7 @@ window.SB_SCHEDULE = [
   { day: 33, date: '2026-08-03', file: 'day33.html' },
   { day: 34, date: '2026-08-04', file: 'day34.html' },
   { day: 35, date: '2026-08-05', file: 'day35.html' },
-  /* Day 36 (Thu Aug 6) is RESERVED for Citadel, centre D. day36.html does not
-     exist yet - the word list is still to come. Restore this line the moment
-     it is built, or Aug 6 silently keeps Day 35 on screen:
-  { day: 36, date: '2026-08-06', file: 'day36.html' }, */
+  { day: 36, date: '2026-08-06', file: 'day36.html' },
   { day: 37, date: '2026-08-07', file: 'day37.html' },
   { day: 38, date: '2026-08-09', file: 'day38.html' },
   { day: 39, date: '2026-08-10', file: 'day39.html' },
