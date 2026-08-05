@@ -552,8 +552,8 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">The Divine Presence</h2>
-    <p class="hero-credit">The nearness of God, welcomed like a bride each Sabbath eve — find the Hebrew word for that indwelling presence.</p>
+    <h2 class="hero-theme">Too Bright to Enter</h2>
+    <p class="hero-credit">The cloud settled on the sanctuary and the glory filled it, and Moses could not go in &mdash; find the word for the light that kept him out.</p>
     <a href="#game" class="hero-cta">Day 41 · August 12, 2026 &nbsp;— Play ↓</a>
   </div>
 </section>
@@ -563,8 +563,8 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="theme-card">
     <div class="theme-card-label">Today's Inspiration</div>
-    <p>The rabbis gave a name to God's felt presence in the world — said to rest upon the Sabbath table, to follow her people into exile, and to return with them. On Friday evening, families rise to welcome her in.</p>
-    <cite>— The indwelling presence</cite>
+    <p>Then the cloud covered the tent of meeting, and the glory of the Lord filled the tabernacle. And Moses was not able to enter into the tent of meeting, because the cloud abode thereon, and the glory of the Lord filled the tabernacle.</p>
+    <cite>&mdash; Exodus 40:34&ndash;35</cite>
   </div>
 
   <div class="word-display" id="wordDisplay">·</div>
@@ -586,11 +586,11 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0 pts</span>
-      <span class="rank-tick">Good<br>23 pts</span>
-      <span class="rank-tick">Solid<br>57 pts</span>
-      <span class="rank-tick">Great<br>96 pts</span>
-      <span class="rank-tick">Amazing<br>133 pts</span>
-      <span class="rank-tick">Genius<br>172 pts</span>
+      <span class="rank-tick">Good<br>52 pts</span>
+      <span class="rank-tick">Solid<br>129 pts</span>
+      <span class="rank-tick">Great<br>217 pts</span>
+      <span class="rank-tick">Amazing<br>299 pts</span>
+      <span class="rank-tick">Genius<br>387 pts</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -618,7 +618,7 @@ footer a { color: var(--gold); text-decoration: none; }
   <details class="rules-block">
     <summary>How to Play</summary>
     <ul>
-      <li>Every word must contain the <strong>center letter K</strong></li>
+      <li>Every word must contain the <strong>center letter N</strong></li>
       <li>Minimum 4 letters — no maximum</li>
       <li>No proper nouns</li>
       <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
@@ -665,20 +665,26 @@ footer a { color: var(--gold); text-decoration: none; }
 const PUZZLE = {
   day: 41,
   date: 'August 12, 2026',
-  theme: 'The Divine Presence — Shekhinah',
-  center: 'K',
-  outer: ['S', 'H', 'E', 'I', 'N', 'A'],
+  theme: 'Too Bright to Enter - Radiance',
+  center: 'N',
+  outer: ['R', 'A', 'D', 'I', 'C', 'E'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'AKIN','ASKS','EKES','HAKE','HANK','HIKE','INKS','KEEN',
-  'KHAN','KINK','KINS','KISS','KNEE','SAKE','SANK','SEEK',
-  'SINK','SKIN','SKIS','KASHA','KNISH','HANKS','HIKES','KEENS',
-  'KHANS','KINKS','KNEES','SAKES','SEEKS','SHAKE','SHANK','SHEIK',
-  'SINKS','SKEIN','SKIES','SNAKE','SNEAK','HANKIE','KHAKI','KINASE',
-  'SHAKEN','SHAKES','SHANKS','SHEIKH','SHEIKS','SKEINS','SNAKES','SNEAKS',
-  'HANKIES','KHAKIS','KISSES','KNISHES','SHEIKHS','SHEKINAH'
+  'ACNE','ADDEND','ADDENDA','ADENINE','ARCADIAN','ARCANE','ARENA','CADENCE',
+  'CAIRN','CANARD','CANCAN','CANCER','CANDID','CANDIED','CANE','CANED',
+  'CANER','CANID','CANINE','CANNED','CANNER','CANNIER','CAREEN','CINDER',
+  'CINDERED','CIRCADIAN','CRANE','CRANED','CREDENCE','DANCE','DANCED','DANCER',
+  'DARN','DARNED','DEADEN','DEADENED','DEAN','DECADENCE','DENIED','DENIER',
+  'DINAR','DINE','DINED','DINER','DINNER','DRAIN','DRAINED','DRAINER',
+  'EARN','EARNED','EARNER','ENDEAR','ENDEARED','ENDED','ERRAND','INANE',
+  'INCIDENCE','INDEED','INDICA','INDIE','INNER','IRRADIANCE','NAAN','NADA',
+  'NADIR','NAIAD','NANA','NARC','NEAR','NEARED','NEARER','NEED',
+  'NEEDED','NERD','NIACIN','NICE','NICER','NIECE','NINE','RADIAN',
+  'RADIANCE','RAIN','RAINED','RANCID','RAND','RANI','REDDEN','REIN',
+  'REINDEER','REINED','REND','RENDER','RENDERED','RICIN','RIDDANCE','RIDDEN',
+  'RIND'
 ]),
-  maxScore: 229,
+  maxScore: 516,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
@@ -700,7 +706,7 @@ function revealWords() {
         const chip = document.createElement("span");
         chip.textContent = w;
         chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "SHEKINAH") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
+        if (w === "RADIANCE") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
         missedDiv.appendChild(chip);
       });
     }
