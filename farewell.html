@@ -596,81 +596,37 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-inner">
-    <h2 class="hero-theme">The Watch Above the Gate</h2>
-    <p class="hero-credit">Herodian foundations, a Crusader wall, a Mamluk minaret and an Ottoman gate, all piled into one stronghold beside Jaffa Gate &mdash; find the word for the fortress that guards a city.</p>
-    <a href="#game" class="hero-cta">Day 36 · August 6, 2026 &nbsp;— Play ↓</a>
-  </div>
+    <h2 class="hero-theme">Fifty Puzzles, and a Pause</h2>
+    <p class="hero-credit">Thank you for playing. We are stopping here for a while &mdash; and we would like to hear from you.</p>  </div>
 </section>
 
 <!-- ── GAME ── -->
 <section class="game-section" id="game">
 
   <div class="theme-card">
-    <div class="theme-card-label">Today's Inspiration</div>
-    <p>The minaret everyone photographs was raised by the Ottomans, the stones at its base were cut for Herod, and the name honours a king who never set foot in it. Every conqueror of Jerusalem rebuilt this corner, and each one left the previous ruin standing inside the next.</p>
-    <cite>&mdash; The Tower of David, Jaffa Gate, Jerusalem</cite>
+    <div class="theme-card-label">From Dina and Shalom</div>
+    <p>That is fifty. We began at the end of June with a queen holding Jerusalem, and we have finished with six lines of silver from a hillside above the Hinnom valley.</p>
   </div>
 
-  <div class="word-display" id="wordDisplay">·</div>
-  <div class="feedback" id="feedback"></div>
+  <div style="max-width:640px; margin:22px auto 0; line-height:1.7; color:#3a2e1e; font-size:0.95rem;">
 
-  <div class="hive-wrap" id="hive"></div>
+    <p style="margin-bottom:16px;">We are stopping here for a while. Rosh Hashana comes in on the evening of Friday 11 September, and the weeks before it are not the weeks for setting word puzzles.</p>
 
-  <div class="controls">
-    <button class="btn" onclick="deleteLetter()">⌫ Delete</button>
-    <button class="btn" onclick="shuffleOuter()">⇌ Shuffle</button>
-    <button class="btn primary" onclick="submitWord()">Enter ↵</button>
+    <p style="margin-bottom:16px;">Two things before we go.</p>
+
+    <p style="margin-bottom:16px;"><strong>The first is a question, and we would genuinely like an answer: would you like us to come back after the chagim?</strong> If enough of you say yes, we will think seriously about starting again once the festivals are over. Tell us on Substack &mdash; we are reading.</p>
+
+    <p style="margin-bottom:16px;"><strong>The second:</strong> all fifty are being made into a paperback. The same hives, with room to write beside each one and every answer gathered at the back. We will post the link here the moment it exists.</p>
+
+    <p style="margin-bottom:22px;">Meanwhile nothing disappears. Every puzzle stays exactly where it is, and you can still play all fifty &mdash; the days are listed at the top of this page.</p>
+
+    <p style="text-align:center; margin:28px 0 6px; font-family:'Playfair Display',serif; font-style:italic; font-size:1.15rem; color:#C9A84C;">Shana tova.</p>
+    <p style="text-align:center; font-size:0.9rem; color:#8B7355;">Dina &amp; Shalom</p>
+
+    <p style="text-align:center; margin-top:26px;">
+      <a href="https://theshofarbee.substack.com/" target="_blank" class="nav-btn primary" style="display:inline-block; padding:9px 20px;">Tell us on Substack</a>
+    </p>
   </div>
-
-  <div class="score-section">
-    <div class="score-row">
-      <span class="rank-label" id="rankLabel">Beginner</span>
-      <span class="score-num"><span id="scoreVal">0</span> pts · <span id="wordCount">0</span> words</span>
-    </div>
-    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-    <div class="rank-ticks" id="rankTicks">
-      <span class="rank-tick">Beginner<br>0 pts</span>
-      <span class="rank-tick">Good<br>53 pts</span>
-      <span class="rank-tick">Solid<br>133 pts</span>
-      <span class="rank-tick">Great<br>223 pts</span>
-      <span class="rank-tick">Amazing<br>308 pts</span>
-      <span class="rank-tick">Genius<br>398 pts</span>
-      <span class="rank-tick">⭐ Queen<br>All!</span>
-    </div>
-  </div>
-
-  <div class="found-section">
-    <div class="found-header">
-      <span>Found Words</span>
-      <span id="foundCount">0 found</span>
-    </div>
-    <div class="found-words" id="foundWords"></div>
-  </div>
-
-  <div style="width:100%; order:3; text-align:center; margin-top: 16px;">
-    <button class="btn" id="revealBtn" onclick="revealWords()" style="background:#8B7355;color:white;border:none;padding:8px 24px;border-radius:20px;cursor:pointer;font-size:0.9rem;">
-      🔍 Reveal All Words
-    </button>
-    <div id="revealSection" style="display:none; margin-top:14px; text-align:left;">
-      <p style="color:#8B7355; font-size:0.85rem; margin-bottom:8px;"><em>Words you missed:</em></p>
-      <div id="missedWords" style="display:flex; flex-wrap:wrap; gap:6px;"></div>
-    </div>
-  </div>
-
-  <p class="left-out-cta" style="text-align:center; font-size:0.82rem; color:#6b5d45; margin-top:4px; line-height:1.55; order:4; width:100%;">🐝 Found a word we left out? <a href="https://theshofarbee.substack.com/" target="_blank" style="color:#D4870A; font-weight:700; text-decoration:none;">Tell us on Substack</a> — best discoveries get a shout-out the next day!</p>
-
-  <details class="rules-block">
-    <summary>How to Play</summary>
-    <ul>
-      <li>Every word must contain the <strong>center letter D</strong></li>
-      <li>Minimum 4 letters — no maximum</li>
-      <li>No proper nouns</li>
-      <li>Yiddish words welcome — shlep, chutzpah and friends! 🙂</li>
-      <li>Find the <strong>Pangram</strong> using all 7 letters for ⭐ top honours</li>
-      <li>Tap letters or type on keyboard · Backspace to delete</li>
-      <li>Post your words in the <a href="https://theshofarbee.substack.com/" target="_blank">Substack comments</a></li>
-    </ul>
-  </details>
 
 </section>
 
@@ -705,255 +661,7 @@ footer a { color: var(--gold); text-decoration: none; }
 
 <script src="schedule.js"></script>
 <script>
-// ── PUZZLE CONFIG — update this section each day ───────────────────────────
-const PUZZLE = {
-  day: 36,
-  date: 'August 6, 2026',
-  theme: 'The Watch Above the Gate - Citadel',
-  center: 'D',
-  outer: ['C', 'I', 'T', 'A', 'E', 'L'],
-  // Official word list — update after Substack post publishes answers
-  words: new Set([
-  'ACCEDE','ACCEDED','ACED','ACID','ACIDIC','ACTED','ADDED','ADDICT',
-  'ADDICTED','ADDLE','ADDLED','AIDE','AIDED','AILED','ALLIED','CADDIE',
-  'CADDIED','CADET','CALLED','CEDE','CEDED','CICADA','CITADEL','CITED',
-  'CLAD','DALE','DALLIED','DATA','DATE','DATED','DEAD','DEAL',
-  'DEALT','DECADE','DECEIT','DECIDE','DECIDED','DEDICATE','DEDICATED','DEED',
-  'DEICE','DEICED','DELETE','DELETED','DELI','DELICATE','DELL','DELTA',
-  'DETAIL','DETAILED','DETECT','DETECTED','DIAL','DIALECT','DIALECTIC','DIALED',
-  'DICE','DICED','DICTATE','DICTATED','DIDACTIC','DIED','DIET','DIETED',
-  'DIETETIC','DILATE','DILATED','DILL','EDICT','EDIT','EDITED','ELATED',
-  'ELECTED','ELICITED','ICED','IDEA','IDEAL','IDLE','IDLED','LACED',
-  'LACTATED','LADDIE','LADLE','LADLED','LAID','LATTICED','LEAD','LEADED',
-  'LIED','LILTED','TAILED','TALLIED','TATTLED','TIDAL','TIDE','TIDIED',
-  'TIED','TILDE','TILED','TILLED','TILTED','TITLED'
-]),
-  maxScore: 531,
-};
-// ── REVEAL ──────────────────────────────────────────────────────────────────
-function revealWords() {
-  const btn = document.getElementById("revealBtn");
-  const section = document.getElementById("revealSection");
-  const missedDiv = document.getElementById("missedWords");
-
-  if (section.style.display === "none") {
-    // First click: ask for confirmation
-    if (!confirm("Are you sure you want to reveal the answers? This will show all words you have not found yet.")) return;
-
-    // Show missed words
-    const missed = [...PUZZLE.words].filter(w => !found.has(w)).sort();
-    missedDiv.innerHTML = "";
-    if (missed.length === 0) {
-      missedDiv.innerHTML = "<em style=\"color:#C9A84C\">🐝 You found them all! Queen Bee!</em>";
-    } else {
-      missed.forEach(w => {
-        const chip = document.createElement("span");
-        chip.textContent = w;
-        chip.style.cssText = "background:#f0e8d8;border:1.5px solid #C9A84C;border-radius:3px;padding:3px 10px;font-size:0.82rem;font-weight:500;color:#3a2e1e;";
-        if (w === "CITADEL") { chip.style.background = "#C9A84C"; chip.style.fontWeight = "700"; }
-        missedDiv.appendChild(chip);
-      });
-    }
-    section.style.display = "block";
-    btn.textContent = "🔼 Hide Words";
-  } else {
-    section.style.display = "none";
-    btn.textContent = "🔍 Reveal All Words";
-  }
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-
-const totalScore = [...PUZZLE.words].reduce((s, w) => {
-  const isPangram = [...PUZZLE.outer, PUZZLE.center].every(l => w.includes(l));
-  return s + (w.length === 4 ? 1 : w.length) + (isPangram ? 7 : 0);
-}, 0);
-PUZZLE.maxScore = totalScore;
-
-const RANKS = [
-  { label: 'Beginner', min: 0 },
-  { label: 'Good',     min: Math.round(totalScore * 0.10) },
-  { label: 'Solid',    min: Math.round(totalScore * 0.25) },
-  { label: 'Great',    min: Math.round(totalScore * 0.42) },
-  { label: 'Amazing',  min: Math.round(totalScore * 0.58) },
-  { label: 'Genius',   min: Math.round(totalScore * 0.75) },
-  { label: '⭐ Queen Bee', min: totalScore },
-];
-// Build the rank ruler from RANKS so labels/values always match the thresholds
-(function(){
-  var t = document.getElementById('rankTicks');
-  if (t) t.innerHTML = RANKS.map(function(r,i){
-    var label = r.label === '⭐ Queen Bee' ? '⭐ Queen' : r.label;
-    var val = (i === RANKS.length - 1) ? 'All!' : r.min + ' pts';
-    return '<span class="rank-tick">' + label + '<br>' + val + '</span>';
-  }).join('');
-})();
-
-let current = [];
-let found = new Set();
-let score = 0;
-let outerLetters = [...PUZZLE.outer];
-
-// ── HIVE ────────────────────────────────────────────────────────────────────
-const CX = 130, CY = 100, DIST = 59;
-const ANGLES = [270, 330, 30, 90, 150, 210];
-
-function hexPoints(cx, cy, r) {
-  let pts = [];
-  for (let i = 0; i < 6; i++) {
-    let a = Math.PI / 180 * (60 * i);
-    pts.push(`${cx + r * Math.cos(a)},${cy + r * Math.sin(a)}`);
-  }
-  return pts.join(' ');
-}
-
-function buildHive() {
-  const hive = document.getElementById('hive');
-  hive.innerHTML = '';
-  ANGLES.forEach((deg, i) => {
-    const rad = deg * Math.PI / 180;
-    const bx = CX + DIST * Math.cos(rad);
-    const by = CY + DIST * Math.sin(rad);
-    hive.appendChild(makeHex(outerLetters[i], bx, by, false));
-  });
-  hive.appendChild(makeHex(PUZZLE.center, CX, CY, true));
-}
-
-function makeHex(letter, cx, cy, isCenter) {
-  const btn = document.createElement('button');
-  btn.className = 'hex-btn' + (isCenter ? ' center' : '');
-  btn.style.left = (cx - 39) + 'px';
-  btn.style.top = (cy - 39) + 'px';
-  btn.setAttribute('aria-label', 'Letter ' + letter);
-  const pts = hexPoints(39, 39, 34);
-  btn.innerHTML = `<svg viewBox="0 0 78 78" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="${pts}"/>
-    <text x="39" y="41">${letter}</text>
-  </svg>`;
-  btn.addEventListener('click', () => addLetter(letter));
-  return btn;
-}
-
-// ── INPUT ───────────────────────────────────────────────────────────────────
-function addLetter(l) { current.push(l); render(); }
-
-function deleteLetter() { current.pop(); render(); clearFb(); }
-
-function render() {
-  const el = document.getElementById('wordDisplay');
-  el.textContent = current.length ? current.join('') : '·';
-  el.className = 'word-display';
-}
-
-function submitWord() {
-  const word = current.join('');
-  if (!word) return;
-
-  if (word.length < 4) { fail('Too short — need at least 4 letters', true); return; }
-  if (!word.includes(PUZZLE.center)) { fail(`Must contain the center letter ${PUZZLE.center}`); return; }
-  if (found.has(word)) { fail('Already found!'); return; }
-  if (!PUZZLE.words.has(word)) { fail('Not in word list'); return; }
-
-  // Accept
-  found.add(word);
-  const isPangram = [...PUZZLE.outer, PUZZLE.center].every(l => word.includes(l));
-  const pts = word.length === 4 ? 1 : word.length;
-  score += pts + (isPangram ? 7 : 0);
-
-  addChip(word, isPangram);
-  updateScore();
-  saveProgress();
-
-  const msgs = isPangram
-    ? ['⭐ PANGRAM! All 7 letters!', '🐝 Queen move!', '⭐ Magnificent!']
-    : ['Nice!', 'Great!', 'Brilliant!', 'Well found!', 'Lovely!', 'Excellent!'];
-  showFb(msgs[Math.floor(Math.random() * msgs.length)], false);
-
-  document.getElementById('wordDisplay').className = 'word-display success';
-  current = [];
-  setTimeout(render, 700);
-}
-
-function fail(msg, keep) {
-  showFb(msg, true);
-  const el = document.getElementById('wordDisplay');
-  el.classList.add('shake');
-  setTimeout(() => { if (keep) { el.className = 'word-display'; } else { current = []; render(); } }, 400);
-}
-
-function showFb(msg, isErr) {
-  const el = document.getElementById('feedback');
-  el.textContent = msg;
-  el.className = 'feedback' + (isErr ? ' error' : '');
-  clearTimeout(window._fb);
-  window._fb = setTimeout(clearFb, 2000);
-}
-function clearFb() { document.getElementById('feedback').textContent = ''; }
-
-function addChip(word, isPangram) {
-  const container = document.getElementById('foundWords');
-  const chip = document.createElement('span');
-  chip.className = 'word-chip' + (isPangram ? ' pangram' : '');
-  chip.textContent = word;
-  const chips = [...container.querySelectorAll('.word-chip')];
-  const after = chips.find(c => c.textContent > word);
-  if (after) container.insertBefore(chip, after);
-  else container.appendChild(chip);
-  document.getElementById('foundCount').textContent = found.size + ' found';
-}
-
-function updateScore() {
-  document.getElementById('scoreVal').textContent = score;
-  document.getElementById('wordCount').textContent = found.size;
-  let ri = 0;
-  for (let i = 0; i < RANKS.length; i++) { if (score >= RANKS[i].min) ri = i; }
-  const seg = 100 / (RANKS.length - 1);
-  let pct;
-  if (ri >= RANKS.length - 1) { pct = 100; }
-  else {
-    const lo = RANKS[ri].min, hi = RANKS[ri + 1].min;
-    const within = hi > lo ? Math.min(1, (score - lo) / (hi - lo)) : 0;
-    pct = (ri + within) * seg;
-  }
-  document.getElementById('progressFill').style.width = pct + '%';
-  document.getElementById('rankLabel').textContent = RANKS[ri].label;
-}
-
-function shuffleOuter() {
-  for (let i = outerLetters.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [outerLetters[i], outerLetters[j]] = [outerLetters[j], outerLetters[i]];
-  }
-  buildHive();
-}
-
-document.addEventListener('keydown', e => {
-  const k = e.key.toUpperCase();
-  if (k === 'ENTER') { submitWord(); return; }
-  if (k === 'BACKSPACE') { deleteLetter(); return; }
-  const all = [...PUZZLE.outer, PUZZLE.center];
-  if (all.includes(k)) addLetter(k);
-});
-
-function saveProgress() {
-  try { localStorage.setItem('sb_found_' + PUZZLE.day, JSON.stringify([...found])); } catch (e) {}
-}
-function loadProgress() {
-  let saved;
-  try { saved = JSON.parse(localStorage.getItem('sb_found_' + PUZZLE.day) || '[]'); } catch (e) { saved = []; }
-  saved.forEach(word => {
-    if (found.has(word) || !PUZZLE.words.has(word)) return;
-    found.add(word);
-    const isPangram = [...PUZZLE.outer, PUZZLE.center].every(l => word.includes(l));
-    score += (word.length === 4 ? 1 : word.length) + (isPangram ? 7 : 0);
-    addChip(word, isPangram);
-  });
-  updateScore();
-}
-
-buildHive();
-loadProgress();
-if (window.sbBuildNav) sbBuildNav(PUZZLE.day);
+if (window.sbBuildNav) sbBuildNav(51);
 </script>
 </body>
 </html>

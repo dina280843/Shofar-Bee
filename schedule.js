@@ -52,7 +52,10 @@ window.SB_SCHEDULE = [
   { day: 47, date: '2026-08-19', file: 'day47.html' },
   { day: 48, date: '2026-08-20', file: 'day48.html' },
   { day: 49, date: '2026-08-21', file: 'day49.html' },
-  { day: 50, date: '2026-08-23', file: 'day50.html' }
+  { day: 50, date: '2026-08-23', file: 'day50.html' },
+  /* Not a puzzle: the closing note, live the day after the last one. It
+     carries its own nav label so it is not announced as "Day 51". */
+  { day: 51, date: '2026-08-24', file: 'farewell.html', label: 'Fifty & a Pause' }
 ];
 
 /* The puzzle that should be live now: the latest whose date is on or before
@@ -79,7 +82,7 @@ window.sbBuildNav = function (currentDay) {
   for (var i = 0; i < window.SB_SCHEDULE.length; i++) {
     var s = window.SB_SCHEDULE[i];
     if (s.day > activeDay) break;
-    h += '<a href="' + s.file + '" class="nav-btn' + (s.day === currentDay ? ' primary' : '') + '">Day ' + s.day + '</a>';
+    h += '<a href="' + s.file + '" class="nav-btn' + (s.day === currentDay ? ' primary' : '') + '">' + (s.label || ('Day ' + s.day)) + '</a>';
   }
   el.innerHTML = h;
 };
