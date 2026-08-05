@@ -586,11 +586,11 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0 pts</span>
-      <span class="rank-tick">Good<br>14 pts</span>
-      <span class="rank-tick">Solid<br>35 pts</span>
-      <span class="rank-tick">Great<br>58 pts</span>
-      <span class="rank-tick">Amazing<br>81 pts</span>
-      <span class="rank-tick">Genius<br>104 pts</span>
+      <span class="rank-tick">Good<br>17 pts</span>
+      <span class="rank-tick">Solid<br>42 pts</span>
+      <span class="rank-tick">Great<br>70 pts</span>
+      <span class="rank-tick">Amazing<br>96 pts</span>
+      <span class="rank-tick">Genius<br>125 pts</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -670,13 +670,14 @@ const PUZZLE = {
   outer: ['D', 'I', 'A', 'S', 'O', 'P'],
   // Official word list — update after Substack post publishes answers
   words: new Set([
-  'AIRS','ARID','OARS','PAIR','PARS','PROD','RAID','RAPS',
-  'RASP','RIDS','RIPS','ROAD','ROAR','SARI','SOAR','DRIP',
-  'DROP','DROPS','PAIRS','PRIOR','PRODS','RADIO','RAIDS','RAPID',
-  'RASPS','ROADS','ROARS','SOARS','RADIOS','RAPIDS','PRIORS','AIRDROP',
-  'AIRDROPS','PROA','PROAS','PARD','PARDS','DIASPORA'
+  'AIRS','ARIA','ARID','DOOR','DRIP','DROP','IRIS','OARS',
+  'PAIR','PROD','RAID','RAPS','RASP','RIDS','RIPS','ROAD',
+  'ROAR','SARI','SOAR','ARIAS','DOORS','DROOP','DROPS','PAIRS',
+  'PRIOR','PRODS','RADAR','RADIO','RAIDS','RAPID','RASPS','ROADS',
+  'ROARS','SOARS','SPOOR','DROOPS','PRIORS','RADIOS','RAPIDS','SPOORS',
+  'AIRDROP','AIRDROPS','DIASPORA'
 ]),
-  maxScore: 139,
+  maxScore: 166,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
