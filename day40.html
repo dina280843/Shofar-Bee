@@ -534,53 +534,9 @@ footer {
 }
 footer a { color: var(--gold); text-decoration: none; }
 
-/* ── NEW-HOME BANNER ── */
-.move-banner {
-  background: var(--gold);
-  color: var(--dark);
-  font-size: 0.82rem;
-  text-align: center;
-  padding: 9px 42px 9px 16px;
-  position: relative;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-}
-.move-banner strong { font-weight: 700; }
-.move-banner a { color: var(--dark); font-weight: 700; text-decoration: underline; }
-.move-banner-close {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: var(--dark);
-  font-size: 1.2rem;
-  cursor: pointer;
-  line-height: 1;
-  padding: 4px 8px;
-}
 </style>
 </head>
 <body>
-
-<!-- ── NEW-HOME BANNER ── -->
-<div class="move-banner" id="moveBanner">
-  🐝 <strong>The Shofar Bee has a new home!</strong> Bookmark us at
-  <a href="https://dina280843.github.io/Shofar-Bee">dina280843.github.io/Shofar-Bee</a>
-  <button class="move-banner-close" onclick="dismissBanner()" aria-label="Dismiss notice">×</button>
-</div>
-<script>
-  function dismissBanner() {
-    document.getElementById('moveBanner').style.display = 'none';
-    try { localStorage.setItem('sb_banner_dismissed', '1'); } catch (e) {}
-  }
-  try {
-    if (localStorage.getItem('sb_banner_dismissed') === '1') {
-      document.getElementById('moveBanner').style.display = 'none';
-    }
-  } catch (e) {}
-</script>
 
 <!-- ── HEADER ── -->
 <header class="site-header">
@@ -630,11 +586,11 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="rank-ticks" id="rankTicks">
       <span class="rank-tick">Beginner<br>0 pts</span>
-      <span class="rank-tick">Good<br>96 pts</span>
-      <span class="rank-tick">Solid<br>241 pts</span>
-      <span class="rank-tick">Great<br>404 pts</span>
-      <span class="rank-tick">Amazing<br>558 pts</span>
-      <span class="rank-tick">Genius<br>722 pts</span>
+      <span class="rank-tick">Good<br>90 pts</span>
+      <span class="rank-tick">Solid<br>225 pts</span>
+      <span class="rank-tick">Great<br>378 pts</span>
+      <span class="rank-tick">Amazing<br>521 pts</span>
+      <span class="rank-tick">Genius<br>674 pts</span>
       <span class="rank-tick">⭐ Queen<br>All!</span>
     </div>
   </div>
@@ -729,9 +685,9 @@ const PUZZLE = {
   'RESTRICT','RETICENT','SCIENCES','SENTENCE','CENTRISTS','CRESCENTS','CRITICISE','ECCENTRIC',
   'ERECTNESS','INSINCERE','INSTINCTS','INTERSECT','INTRINSIC','RESTRICTS','RETICENCE','SCENERIES',
   'SCIENTIST','SENESCENT','SENTENCES','SENTIENCE','CRITICISES','ECCENTRICS','INSISTENCE','INTERSECTS',
-  'INTERSTICE','SCIENTISTS','SENESCENCE','STRICTNESS','INTERNECINE','NECESSITIES','INSINCERITIES','ECCENTRICITIES'
+  'INTERSTICE','SCIENTISTS','SENESCENCE','STRICTNESS'
 ]),
-  maxScore: 962,
+  maxScore: 899,
 };
 // ── REVEAL ──────────────────────────────────────────────────────────────────
 function revealWords() {
